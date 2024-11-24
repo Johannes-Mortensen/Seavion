@@ -6,10 +6,10 @@ export const HeroContent = () => {
   return (
     <div className="relative z-10 h-full flex flex-col items-center justify-center px-4">
       <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold text-white text-center mb-8 tracking-tight">
-        Data. AI. Havet. Perfeksjon.
+        Vi forvandler data til vekst.
       </h1>
       <h2 className="text-2xl md:text-3xl text-blue-200 text-center max-w-3xl mx-auto mb-6 leading-relaxed">
-        Skreddersydde løsninger for smartere, bærekraftig drift.
+        Fra innsikt til handling – AI og dataløsninger for alle bransjer.
       </h2>
       <p className="text-xl md:text-2xl text-gray-200 text-center max-w-3xl mx-auto mb-8 leading-relaxed">
         La oss hjelpe deg med å utnytte kraften i kunstig intelligens for å transformere din virksomhet og sikre konkurransefortrinn i morgendagens marked.
@@ -21,14 +21,14 @@ export const HeroContent = () => {
         <Button 
           className="bg-white text-gray-900 hover:bg-gray-100 text-lg px-8 py-6 rounded-full transition-all hover:scale-105 duration-300"
         >
-          Kom i gang
+          Utforsk våre løsninger
           <ArrowRight className="ml-2 animate-pulse" />
         </Button>
         <Button 
           variant="outline" 
           className="backdrop-blur-sm bg-white/10 border-white text-white hover:bg-white/20 text-lg px-8 py-6 rounded-full transition-all hover:scale-105 duration-300 shadow-lg"
         >
-          Les mer
+          Kontakt oss i dag
         </Button>
       </div>
       
