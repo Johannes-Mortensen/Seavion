@@ -49,57 +49,80 @@ export const HeroContent = () => {
               transition: 'transform 0.1s ease'
             }}
           >
-            {/* Front face */}
+            {/* Grid points */}
+            {[...Array(4)].map((_, i) => (
+              [...Array(4)].map((_, j) => (
+                [...Array(4)].map((_, k) => (
+                  <div
+                    key={`${i}-${j}-${k}`}
+                    className="absolute w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_10px_#22d3ee] animate-pulse"
+                    style={{
+                      transform: `translate3d(${i * 167}px, ${j * 167}px, ${k * 167 - 250}px)`,
+                      opacity: 0.8,
+                    }}
+                  />
+                ))
+              ))
+            ))}
+
+            {/* Cube edges with glowing effect */}
             <div 
-              className="absolute w-full h-full bg-transparent border-2 border-blue-400/40 backdrop-blur-[2px]"
-              style={{ 
+              className="absolute w-full h-full"
+              style={{
                 transform: 'translateZ(250px)',
-                backfaceVisibility: 'visible'
+                border: '1px solid rgba(34, 211, 238, 0.3)',
+                boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)',
+                background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)',
               }}
             />
             
-            {/* Back face */}
             <div 
-              className="absolute w-full h-full bg-transparent border-2 border-purple-400/40 backdrop-blur-[2px]"
-              style={{ 
+              className="absolute w-full h-full"
+              style={{
                 transform: 'translateZ(-250px) rotateY(180deg)',
-                backfaceVisibility: 'visible'
+                border: '1px solid rgba(34, 211, 238, 0.3)',
+                boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)',
+                background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)',
               }}
             />
             
-            {/* Right face */}
             <div 
-              className="absolute w-full h-full bg-transparent border-2 border-pink-400/40 backdrop-blur-[2px]"
-              style={{ 
+              className="absolute w-full h-full"
+              style={{
                 transform: 'rotateY(90deg) translateZ(250px)',
-                backfaceVisibility: 'visible'
+                border: '1px solid rgba(34, 211, 238, 0.3)',
+                boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)',
+                background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)',
               }}
             />
             
-            {/* Left face */}
             <div 
-              className="absolute w-full h-full bg-transparent border-2 border-blue-400/40 backdrop-blur-[2px]"
-              style={{ 
+              className="absolute w-full h-full"
+              style={{
                 transform: 'rotateY(-90deg) translateZ(250px)',
-                backfaceVisibility: 'visible'
+                border: '1px solid rgba(34, 211, 238, 0.3)',
+                boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)',
+                background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)',
               }}
             />
             
-            {/* Top face */}
             <div 
-              className="absolute w-full h-full bg-transparent border-2 border-purple-400/40 backdrop-blur-[2px]"
-              style={{ 
+              className="absolute w-full h-full"
+              style={{
                 transform: 'rotateX(90deg) translateZ(250px)',
-                backfaceVisibility: 'visible'
+                border: '1px solid rgba(34, 211, 238, 0.3)',
+                boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)',
+                background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)',
               }}
             />
             
-            {/* Bottom face */}
             <div 
-              className="absolute w-full h-full bg-transparent border-2 border-pink-400/40 backdrop-blur-[2px]"
-              style={{ 
+              className="absolute w-full h-full"
+              style={{
                 transform: 'rotateX(-90deg) translateZ(250px)',
-                backfaceVisibility: 'visible'
+                border: '1px solid rgba(34, 211, 238, 0.3)',
+                boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)',
+                background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)',
               }}
             />
           </div>
