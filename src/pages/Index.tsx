@@ -5,7 +5,8 @@ import { DigitalOverlay } from "@/components/hero/DigitalOverlay";
 import { HeroContent } from "@/components/hero/HeroContent";
 import { WhySection } from "@/components/sections/WhySection";
 import { SolutionsSection } from "@/components/sections/SolutionsSection";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
+import { AboutUsSection } from "@/components/sections/AboutUsSection";
+import { Footer } from "@/components/Footer";
 import { ArrowRight } from "lucide-react";
 
 const Index = () => {
@@ -28,7 +29,7 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 opacity-0 animate-[fadeIn_1s_ease-out_forwards]">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
       {/* Hero Section */}
       <div className="h-screen relative overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -44,7 +45,7 @@ const Index = () => {
         <HeroContent />
       </div>
 
-      {/* Why Seavion Section */}
+      {/* Why Section */}
       <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div className="absolute inset-0 opacity-5 bg-gradient-to-r from-blue-500/10 to-purple-500/10" />
         <WhySection />
@@ -56,11 +57,11 @@ const Index = () => {
         <SolutionsSection />
       </div>
 
-      {/* Testimonials Section */}
-      <div className="relative bg-gradient-to-bl from-gray-900 via-gray-800 to-gray-900">
-        <div className="absolute inset-0 opacity-5 bg-gradient-to-r from-blue-500/10 to-cyan-500/10" />
-        <TestimonialsSection />
-      </div>
+      {/* About Us Section */}
+      <AboutUsSection />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
