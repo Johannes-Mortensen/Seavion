@@ -46,44 +46,32 @@ const Index = () => {
       </div>
 
       {/* Why Seavion Section */}
-      <div className="relative">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
-            alt="Data visualization"
-            className="w-full h-full object-cover brightness-[0.2]"
-          />
-        </div>
+      <div className="relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500 to-transparent" />
         <WhySection />
       </div>
 
       {/* Solutions Section */}
-      <div className="relative">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
-            alt="Technology solutions"
-            className="w-full h-full object-cover brightness-[0.2]"
-          />
+      <div className="relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+        <div className="absolute inset-0 opacity-10">
+          <div className="w-full h-full bg-[linear-gradient(60deg,_#abecd6_0%,_#fbed96_100%)]" />
         </div>
         <SolutionsSection />
       </div>
 
       {/* Industries Section */}
-      <div className="relative">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1518005020951-eccb494ad742"
-            alt="Industrial setting"
-            className="w-full h-full object-cover brightness-[0.2]"
-          />
+      <div className="relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+        <div className="absolute inset-0 opacity-5">
+          <div className="w-full h-full bg-[linear-gradient(to_right,_#243949_0%,_#517fa4_100%)]" />
         </div>
         <IndustriesSection />
       </div>
 
       {/* Testimonials Section */}
-      <div className="relative">
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900" />
+      <div className="relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+        <div className="absolute inset-0 opacity-10">
+          <div className="w-full h-full bg-[linear-gradient(to_top,_#accbee_0%,_#e7f0fd_100%)]" />
+        </div>
         <TestimonialsSection />
       </div>
     </div>
