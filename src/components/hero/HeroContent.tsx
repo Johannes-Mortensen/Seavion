@@ -49,22 +49,6 @@ export const HeroContent = () => {
               transition: 'transform 0.1s ease'
             }}
           >
-            {/* Grid points */}
-            {[...Array(4)].map((_, i) => (
-              [...Array(4)].map((_, j) => (
-                [...Array(4)].map((_, k) => (
-                  <div
-                    key={`${i}-${j}-${k}`}
-                    className="absolute w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_10px_#22d3ee] animate-pulse"
-                    style={{
-                      transform: `translate3d(${i * 100}px, ${j * 100}px, ${k * 100}px)`,
-                      opacity: 0.8,
-                    }}
-                  />
-                ))
-              ))
-            ))}
-
             {/* Cube edges with glowing effect */}
             <div 
               className="absolute w-full h-full"
