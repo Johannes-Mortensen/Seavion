@@ -71,15 +71,21 @@ export default {
           '0%': { opacity: '0', transform: 'translateY(10px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        wave: {
-          '0%': { transform: 'translateX(0)' },
-          '50%': { transform: 'translateX(-25%)' },
-          '100%': { transform: 'translateX(0)' },
-        }
+        pulse: {
+          '0%, 100%': { opacity: '0.6' },
+          '50%': { opacity: '0.8' },
+        },
+        slide: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fadeIn 0.5s ease-out forwards",
+        "pulse": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "slide": "slide 8s linear infinite",
       },
     },
   },

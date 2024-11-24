@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-import { WaveBackground } from "@/components/hero/WaveBackground";
 import { DigitalOverlay } from "@/components/hero/DigitalOverlay";
 import { HeroContent } from "@/components/hero/HeroContent";
 import { WhySection } from "@/components/sections/WhySection";
@@ -23,7 +22,7 @@ const Index = () => {
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 flex items-center justify-center">
-        <div className="w-24 h-24 border-t-2 border-purple-500 rounded-full animate-spin" />
+        <div className="w-24 h-24 border-t-2 border-blue-500 rounded-full animate-spin" />
       </div>
     );
   }
@@ -40,27 +39,22 @@ const Index = () => {
           />
         </div>
         
-        <WaveBackground />
         <DigitalOverlay />
         <HeroContent />
       </div>
 
-      {/* Why Section */}
+      {/* Other Sections */}
       <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div className="absolute inset-0 opacity-5 bg-gradient-to-r from-blue-500/10 to-purple-500/10" />
         <WhySection />
       </div>
 
-      {/* Solutions Section */}
       <div className="relative bg-gradient-to-bl from-gray-900 via-gray-800 to-gray-900">
         <div className="absolute inset-0 opacity-5 bg-gradient-to-r from-emerald-500/10 to-blue-500/10" />
         <SolutionsSection />
       </div>
 
-      {/* About Us Section */}
       <AboutUsSection />
-
-      {/* Footer */}
       <Footer />
     </div>
   );
