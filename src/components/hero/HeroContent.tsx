@@ -31,7 +31,7 @@ export const HeroContent = () => {
   return (
     <div className="relative z-10 min-h-screen flex items-center px-4">
       {/* Background Cube */}
-      <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 flex items-center justify-center translate-x-32 overflow-hidden pointer-events-none">
         <div 
           className="relative" 
           style={{ 
@@ -136,7 +136,7 @@ export const HeroContent = () => {
           <Button
             size="lg"
             variant="outline"
-            className="bg-transparent hover:bg-white/10 border-white/50 transform transition-all duration-300 hover:scale-105 hover:shadow-lg w-fit"
+            className="bg-transparent hover:bg-white/10 border-white text-white transform transition-all duration-300 hover:scale-105 hover:shadow-lg w-fit"
           >
             Les mer om oss
           </Button>
