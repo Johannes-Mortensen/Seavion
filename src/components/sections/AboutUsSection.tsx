@@ -30,13 +30,13 @@ export const AboutUsSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Om oss
+            Vår historie
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Vi er et team av dedikerte eksperter som brenner for å hjelpe bedrifter med å utnytte potensialet i moderne teknologi og data.
+            Seavion ble grunnlagt med en visjon om å bygge bro mellom teknologi og menneskelige behov. Vi har siden vokst til å bli en betrodd partner for bedrifter som ønsker å ligge foran i en stadig mer datadrevet verden.
           </p>
           <p className="text-gray-400">
-            Siden starten har vi hjulpet over hundre bedrifter med å transformere deres virksomhet gjennom innovative løsninger og strategisk rådgivning.
+            Fra små bedrifter til store konsern, leverer vi skreddersydde løsninger som skaper verdi. Med et team av eksperter innen teknologi og forretningsutvikling, er vårt mål å gjøre data til din største konkurransefordel.
           </p>
         </div>
 

@@ -10,7 +10,7 @@ export const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Mail className="w-5 h-5 mr-2 text-blue-500" />
-                <span>kontakt@bedrift.no</span>
+                <span>kontakt@seavion.no</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-5 h-5 mr-2 text-blue-500" />
@@ -45,7 +45,7 @@ export const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p>&copy; 2024 Bedriftsnavn. Alle rettigheter reservert.</p>
+          <p>&copy; 2024 Seavion. Alle rettigheter reservert.</p>
         </div>
       </div>
     </footer>
