@@ -46,16 +46,46 @@ const Index = () => {
       </div>
 
       {/* Why Seavion Section */}
-      <WhySection />
+      <div className="relative">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+            alt="Data visualization"
+            className="w-full h-full object-cover brightness-[0.2]"
+          />
+        </div>
+        <WhySection />
+      </div>
 
       {/* Solutions Section */}
-      <SolutionsSection />
+      <div className="relative">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+            alt="Technology solutions"
+            className="w-full h-full object-cover brightness-[0.2]"
+          />
+        </div>
+        <SolutionsSection />
+      </div>
 
       {/* Industries Section */}
-      <IndustriesSection />
+      <div className="relative">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1518005020951-eccb494ad742"
+            alt="Industrial setting"
+            className="w-full h-full object-cover brightness-[0.2]"
+          />
+        </div>
+        <IndustriesSection />
+      </div>
 
       {/* Testimonials Section */}
-      <TestimonialsSection />
+      <div className="relative">
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900" />
+        <TestimonialsSection />
+      </div>
     </div>
   );
 };
