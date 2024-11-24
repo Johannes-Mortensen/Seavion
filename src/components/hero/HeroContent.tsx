@@ -1,7 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 export const HeroContent = () => {
+  const cubeRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (cubeRef.current) {
+        const scrolled = window.scrollY;
+        cubeRef.current.style.transform = `
+          rotateX(${scrolled * 0.5}deg) 
+          rotateY(${scrolled * 0.5}deg)
+        `;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="relative z-10 min-h-screen flex items-center px-4">
       {/* Left side content */}
@@ -34,62 +52,43 @@ export const HeroContent = () => {
         </div>
       </div>
 
-      {/* Right side animated visualization */}
-      <div className="absolute top-0 right-0 w-96 h-96">
-        <div className="relative w-full h-full">
-          {/* Data flow visualization */}
-          <div className="absolute inset-0">
-            <div className="absolute w-full h-full">
-              {/* Animated data points */}
-              {[...Array(15)].map((_, i) => (
-                <div
-                  key={i}
-                  className="absolute w-2 h-2 bg-blue-400/40 rounded-full"
-                  style={{
-                    top: `${Math.random() * 100}%`,
-                    left: `${Math.random() * 100}%`,
-                    animation: `float ${3 + Math.random() * 4}s infinite`,
-                    animationDelay: `${Math.random() * 2}s`
-                  }}
-                />
-              ))}
-              
-              {/* Connecting lines */}
-              <div className="absolute inset-0">
-                <svg className="w-full h-full">
-                  <path
-                    d="M20,20 Q60,50 100,80"
-                    stroke="rgba(96, 165, 250, 0.2)"
-                    strokeWidth="2"
-                    fill="none"
-                    className="animate-pulse"
-                  />
-                  <path
-                    d="M40,100 Q80,60 120,30"
-                    stroke="rgba(96, 165, 250, 0.2)"
-                    strokeWidth="2"
-                    fill="none"
-                    className="animate-pulse"
-                    style={{ animationDelay: '1s' }}
-                  />
-                </svg>
-              </div>
-            </div>
+      {/* 3D Cube */}
+      <div className="absolute top-20 right-20 perspective-[1000px]">
+        <div
+          ref={cubeRef}
+          className="w-32 h-32 relative transform-style-preserve-3d transition-transform duration-300"
+          style={{ transformStyle: 'preserve-3d' }}
+        >
+          {/* Front face */}
+          <div className="absolute w-full h-full bg-blue-500/30 backdrop-blur-sm border border-blue-300/50 transform translate-z-[64px]"
+               style={{ transform: 'translateZ(64px)' }}>
+            <div className="w-full h-full flex items-center justify-center text-white">Front</div>
           </div>
-
-          {/* Central visualization sphere */}
-          <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute inset-4 bg-blue-400/20 rounded-full blur-2xl animate-pulse" 
-               style={{ animationDelay: '0.2s' }}></div>
-          <div className="absolute inset-8 bg-blue-300/20 rounded-full blur-xl animate-pulse" 
-               style={{ animationDelay: '0.4s' }}></div>
-
-          {/* Floating data indicators */}
-          <div className="absolute top-20 right-20 w-8 h-8 bg-cyan-400/40 rounded-full blur-sm animate-float"></div>
-          <div className="absolute top-40 right-40 w-6 h-6 bg-blue-300/40 rounded-full blur-sm animate-float" 
-               style={{ animationDelay: '1s' }}></div>
-          <div className="absolute bottom-20 right-20 w-4 h-4 bg-green-300/40 rounded-full blur-sm animate-float"
-               style={{ animationDelay: '2s' }}></div>
+          {/* Back face */}
+          <div className="absolute w-full h-full bg-blue-500/30 backdrop-blur-sm border border-blue-300/50 transform -translate-z-[64px]"
+               style={{ transform: 'translateZ(-64px)' }}>
+            <div className="w-full h-full flex items-center justify-center text-white">Back</div>
+          </div>
+          {/* Right face */}
+          <div className="absolute w-full h-full bg-blue-500/30 backdrop-blur-sm border border-blue-300/50 transform translate-x-[64px] rotate-y-90"
+               style={{ transform: 'translateX(64px) rotateY(90deg)' }}>
+            <div className="w-full h-full flex items-center justify-center text-white">Right</div>
+          </div>
+          {/* Left face */}
+          <div className="absolute w-full h-full bg-blue-500/30 backdrop-blur-sm border border-blue-300/50 transform -translate-x-[64px] rotate-y-[-90deg]"
+               style={{ transform: 'translateX(-64px) rotateY(-90deg)' }}>
+            <div className="w-full h-full flex items-center justify-center text-white">Left</div>
+          </div>
+          {/* Top face */}
+          <div className="absolute w-full h-full bg-blue-500/30 backdrop-blur-sm border border-blue-300/50 transform translate-y-[-64px] rotate-x-90"
+               style={{ transform: 'translateY(-64px) rotateX(90deg)' }}>
+            <div className="w-full h-full flex items-center justify-center text-white">Top</div>
+          </div>
+          {/* Bottom face */}
+          <div className="absolute w-full h-full bg-blue-500/30 backdrop-blur-sm border border-blue-300/50 transform translate-y-[64px] rotate-x-[-90deg]"
+               style={{ transform: 'translateY(64px) rotateX(-90deg)' }}>
+            <div className="w-full h-full flex items-center justify-center text-white">Bottom</div>
+          </div>
         </div>
       </div>
     </div>
