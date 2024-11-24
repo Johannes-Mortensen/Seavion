@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Brain, Rocket, Timer, TrendingUp } from "lucide-react";
+import { Brain, Rocket, Timer, TrendingUp, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { WaveBackground } from "@/components/hero/WaveBackground";
 import { DigitalOverlay } from "@/components/hero/DigitalOverlay";
