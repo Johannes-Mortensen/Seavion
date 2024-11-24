@@ -5,15 +5,26 @@ import { ArrowRight, Brain, Rocket, Timer, TrendingUp } from "lucide-react";
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 pt-20 pb-16">
-        <div className="text-center max-w-3xl mx-auto">
-          <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600 mb-6">
+      {/* Ocean Banner */}
+      <div className="w-full h-[40vh] relative mb-16">
+        <img
+          src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21"
+          alt="Ocean waves"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+          <h1 className="text-5xl font-bold text-white text-center max-w-3xl mx-auto px-4">
             Transformér Din Bedrift med AI
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Vi hjelper bedrifter å implementere AI-løsninger som øker effektiviteten og gir konkurransefortrinn i dagens digitale verden.
-          </p>
+        </div>
+      </div>
+
+      {/* Main content section */}
+      <section className="container mx-auto px-4 pb-16">
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto text-center">
+          Vi hjelper bedrifter å implementere AI-løsninger som øker effektiviteten og gir konkurransefortrinn i dagens digitale verden.
+        </p>
+        <div className="text-center">
           <Button className="bg-purple-600 hover:bg-purple-700 text-lg px-8 py-6">
             Kom i gang <ArrowRight className="ml-2" />
           </Button>
