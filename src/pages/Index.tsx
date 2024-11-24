@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { WaveBackground } from "@/components/hero/WaveBackground";
 import { DigitalOverlay } from "@/components/hero/DigitalOverlay";
 import { HeroContent } from "@/components/hero/HeroContent";
+import { WhySection } from "@/components/sections/WhySection";
 import { SolutionsSection } from "@/components/sections/SolutionsSection";
 import { IndustriesSection } from "@/components/sections/IndustriesSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
@@ -43,6 +44,9 @@ const Index = () => {
         <DigitalOverlay />
         <HeroContent />
       </div>
+
+      {/* Why Seavion Section */}
+      <WhySection />
 
       {/* Solutions Section */}
       <SolutionsSection />
