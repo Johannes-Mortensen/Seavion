@@ -4,6 +4,8 @@ import { WaveBackground } from "@/components/hero/WaveBackground";
 import { DigitalOverlay } from "@/components/hero/DigitalOverlay";
 import { HeroContent } from "@/components/hero/HeroContent";
 import { SolutionsSection } from "@/components/sections/SolutionsSection";
+import { IndustriesSection } from "@/components/sections/IndustriesSection";
+import { ArrowRight } from "lucide-react";
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -43,6 +45,9 @@ const Index = () => {
 
       {/* Solutions Section */}
       <SolutionsSection />
+
+      {/* Industries Section */}
+      <IndustriesSection />
     </div>
   );
 };
