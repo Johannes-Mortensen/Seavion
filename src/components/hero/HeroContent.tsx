@@ -56,15 +56,7 @@ export const HeroContent = () => {
                 transform: 'translateZ(250px)',
                 backfaceVisibility: 'visible'
               }}
-            >
-</lov-replace>
-<lov-search>
-              <div className="w-full h-full flex items-center justify-center text-purple-400/60 font-bold text-4xl">
-                Data
-              </div>
-</lov-search>
-<lov-replace>
-            </div>
+            />
             
             {/* Back face */}
             <div 
@@ -73,11 +65,7 @@ export const HeroContent = () => {
                 transform: 'translateZ(-250px) rotateY(180deg)',
                 backfaceVisibility: 'visible'
               }}
-            >
-              <div className="w-full h-full flex items-center justify-center text-purple-400/60 font-bold text-4xl">
-                Data
-              </div>
-            </div>
+            />
             
             {/* Right face */}
             <div 
@@ -86,15 +74,7 @@ export const HeroContent = () => {
                 transform: 'rotateY(90deg) translateZ(250px)',
                 backfaceVisibility: 'visible'
               }}
-            >
-</lov-replace>
-<lov-search>
-              <div className="w-full h-full flex items-center justify-center text-blue-400/60 font-bold text-4xl">
-                Cloud
-              </div>
-</lov-search>
-<lov-replace>
-            </div>
+            />
             
             {/* Left face */}
             <div 
@@ -103,11 +83,7 @@ export const HeroContent = () => {
                 transform: 'rotateY(-90deg) translateZ(250px)',
                 backfaceVisibility: 'visible'
               }}
-            >
-              <div className="w-full h-full flex items-center justify-center text-blue-400/60 font-bold text-4xl">
-                Cloud
-              </div>
-            </div>
+            />
             
             {/* Top face */}
             <div 
@@ -116,15 +92,7 @@ export const HeroContent = () => {
                 transform: 'rotateX(90deg) translateZ(250px)',
                 backfaceVisibility: 'visible'
               }}
-            >
-</lov-replace>
-<lov-search>
-              <div className="w-full h-full flex items-center justify-center text-pink-400/60 font-bold text-4xl">
-                Edge
-              </div>
-</lov-search>
-<lov-replace>
-            </div>
+            />
             
             {/* Bottom face */}
             <div 
@@ -133,11 +101,7 @@ export const HeroContent = () => {
                 transform: 'rotateX(-90deg) translateZ(250px)',
                 backfaceVisibility: 'visible'
               }}
-            >
-              <div className="w-full h-full flex items-center justify-center text-pink-400/60 font-bold text-4xl">
-                Edge
-              </div>
-            </div>
+            />
           </div>
         </div>
       </div>
