@@ -1,4 +1,4 @@
-import { Factory, ShoppingCart, Cpu, Truck, Heart } from "lucide-react";
+import { Factory, ShoppingCart, Cpu, Truck, Fish } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const IndustriesSection = () => {
@@ -24,9 +24,9 @@ export const IndustriesSection = () => {
       description: "Effektiviser og automatiser transport og lagring."
     },
     {
-      icon: <Heart className="w-12 h-12 text-red-500" />,
-      title: "Helse",
-      description: "Forbedre pasientresultater gjennom avansert dataanalyse."
+      icon: <Fish className="w-12 h-12 text-cyan-500" />,
+      title: "Hav/marine",
+      description: "Optimalisering av oppdrettsanlegg og havbruk med AI-løsninger."
     }
   ];
 
