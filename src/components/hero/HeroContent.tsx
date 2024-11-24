@@ -117,12 +117,12 @@ export const HeroContent = () => {
       <div className="w-full md:w-1/2 space-y-6 text-left pl-8 md:pl-16 mt-32">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in opacity-0 text-white" 
             style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-          Seavion
+          Utnytt kraften i AI – skap fremtiden i dag
         </h1>
         
         <p className="text-xl md:text-2xl max-w-xl mb-8 animate-fade-in opacity-0 text-white/90"
            style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
-          Vi hjelper bedrifter å utnytte kraften i data og kunstig intelligens for å skape målbare resultater og bærekraftig vekst.
+          Seavion leverer AI- og dataløsninger som driver vekst i enhver bransje.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-in opacity-0"
