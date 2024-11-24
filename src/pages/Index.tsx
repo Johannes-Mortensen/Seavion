@@ -1,10 +1,30 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Brain, Rocket, Timer, TrendingUp } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const Index = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simuler en kort lastetid
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 800);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 flex items-center justify-center">
+        <div className="w-24 h-24 border-t-2 border-purple-500 rounded-full animate-spin" />
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 opacity-0 animate-[fadeIn_1s_ease-out_forwards]">
       {/* Ocean Banner with Parallax Effect */}
       <div className="w-full h-[50vh] relative mb-20 overflow-hidden">
         <img
@@ -13,11 +33,11 @@ const Index = () => {
           className="w-full h-full object-cover brightness-50 scale-105 hover:scale-100 transition-transform duration-700"
         />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-          <div className="max-w-4xl mx-auto px-4 animate-fade-in">
-            <h1 className="text-6xl font-bold text-white text-center mb-6 animate-fade-in">
+          <div className="max-w-4xl mx-auto px-4">
+            <h1 className="text-6xl font-bold text-white text-center mb-6">
               Transformér Din Bedrift med AI
             </h1>
-            <p className="text-xl text-gray-200 text-center animate-fade-in">
+            <p className="text-xl text-gray-200 text-center">
               Utnytt kraften i kunstig intelligens for å drive din virksomhet fremover
             </p>
           </div>
