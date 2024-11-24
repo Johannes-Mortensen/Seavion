@@ -46,32 +46,26 @@ const Index = () => {
       </div>
 
       {/* Why Seavion Section */}
-      <div className="relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500 to-transparent" />
+      <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+        <div className="absolute inset-0 opacity-5 bg-gradient-to-r from-blue-500/10 to-purple-500/10" />
         <WhySection />
       </div>
 
       {/* Solutions Section */}
-      <div className="relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
-        <div className="absolute inset-0 opacity-10">
-          <div className="w-full h-full bg-[linear-gradient(60deg,_#abecd6_0%,_#fbed96_100%)]" />
-        </div>
+      <div className="relative bg-gradient-to-bl from-gray-900 via-gray-800 to-gray-900">
+        <div className="absolute inset-0 opacity-5 bg-gradient-to-r from-emerald-500/10 to-blue-500/10" />
         <SolutionsSection />
       </div>
 
       {/* Industries Section */}
-      <div className="relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
-        <div className="absolute inset-0 opacity-5">
-          <div className="w-full h-full bg-[linear-gradient(to_right,_#243949_0%,_#517fa4_100%)]" />
-        </div>
+      <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+        <div className="absolute inset-0 opacity-5 bg-gradient-to-r from-purple-500/10 to-pink-500/10" />
         <IndustriesSection />
       </div>
 
       {/* Testimonials Section */}
-      <div className="relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
-        <div className="absolute inset-0 opacity-10">
-          <div className="w-full h-full bg-[linear-gradient(to_top,_#accbee_0%,_#e7f0fd_100%)]" />
-        </div>
+      <div className="relative bg-gradient-to-bl from-gray-900 via-gray-800 to-gray-900">
+        <div className="absolute inset-0 opacity-5 bg-gradient-to-r from-blue-500/10 to-cyan-500/10" />
         <TestimonialsSection />
       </div>
     </div>
