@@ -6,18 +6,27 @@ export const HeroContent = () => {
   const cubeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
+    let animationFrame: number;
+    let rotation = 0;
+
+    const animate = () => {
       if (cubeRef.current) {
-        const scrolled = window.scrollY;
+        rotation += 0.5;
         cubeRef.current.style.transform = `
-          rotateX(${scrolled * 0.5}deg) 
-          rotateY(${scrolled * 0.5}deg)
+          rotateX(${rotation}deg) 
+          rotateY(${rotation}deg)
         `;
       }
+      animationFrame = requestAnimationFrame(animate);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    animate();
+
+    return () => {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+    };
   }, []);
 
   return (
