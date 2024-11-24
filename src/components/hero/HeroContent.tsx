@@ -57,7 +57,7 @@ export const HeroContent = () => {
                     key={`${i}-${j}-${k}`}
                     className="absolute w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_10px_#22d3ee] animate-pulse"
                     style={{
-                      transform: `translate3d(${i * 167}px, ${j * 167}px, ${k * 167}px)`,
+                      transform: `translate3d(${i * 100}px, ${j * 100}px, ${k * 100}px)`,
                       opacity: 0.8,
                     }}
                   />
