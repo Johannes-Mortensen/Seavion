@@ -5,7 +5,6 @@ import { DigitalOverlay } from "@/components/hero/DigitalOverlay";
 import { HeroContent } from "@/components/hero/HeroContent";
 import { WhySection } from "@/components/sections/WhySection";
 import { SolutionsSection } from "@/components/sections/SolutionsSection";
-import { IndustriesSection } from "@/components/sections/IndustriesSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ArrowRight } from "lucide-react";
 
@@ -55,12 +54,6 @@ const Index = () => {
       <div className="relative bg-gradient-to-bl from-gray-900 via-gray-800 to-gray-900">
         <div className="absolute inset-0 opacity-5 bg-gradient-to-r from-emerald-500/10 to-blue-500/10" />
         <SolutionsSection />
-      </div>
-
-      {/* Industries Section */}
-      <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-        <div className="absolute inset-0 opacity-5 bg-gradient-to-r from-purple-500/10 to-pink-500/10" />
-        <IndustriesSection />
       </div>
 
       {/* Testimonials Section */}
