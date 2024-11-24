@@ -1,4 +1,4 @@
-import { Brain, Cpu, LineChart, Cloud, Shield, Users } from "lucide-react";
+import { Brain, Cpu, LineChart, Lightbulb, Rocket, Users } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const SolutionsSection = () => {
@@ -19,14 +19,14 @@ export const SolutionsSection = () => {
       description: "Skap bærekraftige og fremtidsrettede løsninger med vår ekspertise. Vi hjelper deg med å navigere i det digitale landskapet."
     },
     {
-      icon: <Cloud className="w-12 h-12 text-purple-500" />,
-      title: "Skyløsninger",
-      description: "Moderne og skalerbare skyløsninger som gir deg fleksibilitet og sikkerhet. Vi hjelper deg med å utnytte skyens fulle potensial."
+      icon: <Lightbulb className="w-12 h-12 text-yellow-500" />,
+      title: "Innovasjon og utvikling",
+      description: "Utvikle nye løsninger og tjenester som gir konkurransefortrinn. Vi hjelper deg med å skape morgendagens muligheter."
     },
     {
-      icon: <Shield className="w-12 h-12 text-red-500" />,
-      title: "Cybersikkerhet",
-      description: "Beskytt din virksomhet mot digitale trusler med våre omfattende sikkerhetsløsninger og ekspertise."
+      icon: <Rocket className="w-12 h-12 text-purple-500" />,
+      title: "Vekststrategi",
+      description: "Identifiser og utnytt nye muligheter for vekst. Vi hjelper deg med å skalere virksomheten på en bærekraftig måte."
     },
     {
       icon: <Users className="w-12 h-12 text-cyan-500" />,
