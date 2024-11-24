@@ -25,7 +25,7 @@ export const IndustriesSection = () => {
     },
     {
       icon: <Fish className="w-12 h-12 text-cyan-500" />,
-      title: "Hav/marine",
+      title: "Havbruk",
       description: "Optimalisering av oppdrettsanlegg og havbruk med AI-løsninger."
     }
   ];
