@@ -5,6 +5,7 @@ import { DigitalOverlay } from "@/components/hero/DigitalOverlay";
 import { HeroContent } from "@/components/hero/HeroContent";
 import { SolutionsSection } from "@/components/sections/SolutionsSection";
 import { IndustriesSection } from "@/components/sections/IndustriesSection";
+import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ArrowRight } from "lucide-react";
 
 const Index = () => {
@@ -48,6 +49,9 @@ const Index = () => {
 
       {/* Industries Section */}
       <IndustriesSection />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
     </div>
   );
 };
