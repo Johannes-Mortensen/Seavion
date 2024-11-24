@@ -57,9 +57,13 @@ export const HeroContent = () => {
                 backfaceVisibility: 'visible'
               }}
             >
-              <div className="w-full h-full flex items-center justify-center text-blue-400/60 font-bold text-4xl">
-                AI
+</lov-replace>
+<lov-search>
+              <div className="w-full h-full flex items-center justify-center text-purple-400/60 font-bold text-4xl">
+                Data
               </div>
+</lov-search>
+<lov-replace>
             </div>
             
             {/* Back face */}
@@ -83,9 +87,13 @@ export const HeroContent = () => {
                 backfaceVisibility: 'visible'
               }}
             >
-              <div className="w-full h-full flex items-center justify-center text-pink-400/60 font-bold text-4xl">
-                ML
+</lov-replace>
+<lov-search>
+              <div className="w-full h-full flex items-center justify-center text-blue-400/60 font-bold text-4xl">
+                Cloud
               </div>
+</lov-search>
+<lov-replace>
             </div>
             
             {/* Left face */}
@@ -109,9 +117,13 @@ export const HeroContent = () => {
                 backfaceVisibility: 'visible'
               }}
             >
-              <div className="w-full h-full flex items-center justify-center text-purple-400/60 font-bold text-4xl">
-                IoT
+</lov-replace>
+<lov-search>
+              <div className="w-full h-full flex items-center justify-center text-pink-400/60 font-bold text-4xl">
+                Edge
               </div>
+</lov-search>
+<lov-replace>
             </div>
             
             {/* Bottom face */}
