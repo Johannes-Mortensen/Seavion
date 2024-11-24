@@ -34,12 +34,20 @@ export const HeroContent = () => {
         </div>
       </div>
 
-      {/* Right side animated element */}
-      <div className="absolute top-0 right-0 w-96 h-96 animate-pulse">
+      {/* Right side animated elements */}
+      <div className="absolute top-0 right-0 w-96 h-96">
         <div className="relative w-full h-full">
+          {/* Main pulsing sphere */}
           <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute inset-4 bg-blue-400/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '0.2s' }}></div>
           <div className="absolute inset-8 bg-blue-300/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+          
+          {/* Floating orbs */}
+          <div className="absolute top-20 right-20 w-8 h-8 bg-blue-400/40 rounded-full blur-sm animate-float"></div>
+          <div className="absolute top-40 right-40 w-6 h-6 bg-blue-300/40 rounded-full blur-sm animate-float" 
+               style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-60 right-20 w-4 h-4 bg-blue-200/40 rounded-full blur-sm animate-float"
+               style={{ animationDelay: '2s' }}></div>
         </div>
       </div>
     </div>
