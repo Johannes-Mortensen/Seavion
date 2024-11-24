@@ -33,7 +33,7 @@ const Index = () => {
       <div className="h-screen relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+            src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21"
             alt="Professional workspace"
             className="w-full h-full object-cover brightness-[0.3] scale-105 transform transition-transform duration-[2s] hover:scale-110"
           />
