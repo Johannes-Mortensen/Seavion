@@ -31,8 +31,11 @@ export const WhySection = () => {
         <h2 className="text-4xl font-bold text-center mb-4 text-white">
           Din partner i vekst og innovasjon
         </h2>
-        <p className="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto">
+        <p className="text-xl text-gray-300 text-center mb-4 max-w-3xl mx-auto">
           Vi leverer ikke bare løsninger, vi leverer resultater.
+        </p>
+        <p className="text-gray-300 text-center mb-16 max-w-3xl mx-auto leading-relaxed">
+          I en verden i rask endring trenger du en partner som ikke bare forstår dagens utfordringer, men som også kan hjelpe deg å forme morgendagens muligheter. Med vår unike kombinasjon av teknologisk ekspertise og bransjekunnskap, hjelper vi bedrifter med å oppnå målbare resultater gjennom innovative løsninger.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
