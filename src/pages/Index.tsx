@@ -5,19 +5,19 @@ import { ArrowRight, Brain, Rocket, Timer, TrendingUp } from "lucide-react";
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
-      {/* Ocean Banner */}
-      <div className="w-full h-[50vh] relative mb-20">
+      {/* Ocean Banner with Parallax Effect */}
+      <div className="w-full h-[50vh] relative mb-20 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21"
           alt="Ocean waves"
-          className="w-full h-full object-cover brightness-50"
+          className="w-full h-full object-cover brightness-50 scale-105 hover:scale-100 transition-transform duration-700"
         />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-          <div className="max-w-4xl mx-auto px-4">
-            <h1 className="text-6xl font-bold text-white text-center mb-6">
+          <div className="max-w-4xl mx-auto px-4 animate-fade-in">
+            <h1 className="text-6xl font-bold text-white text-center mb-6 animate-fade-in">
               Transformér Din Bedrift med AI
             </h1>
-            <p className="text-xl text-gray-200 text-center">
+            <p className="text-xl text-gray-200 text-center animate-fade-in">
               Utnytt kraften i kunstig intelligens for å drive din virksomhet fremover
             </p>
           </div>
@@ -26,103 +26,103 @@ const Index = () => {
 
       {/* Main content section */}
       <section className="container mx-auto px-4 pb-20">
-        <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto text-center leading-relaxed">
+        <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto text-center leading-relaxed hover:text-white transition-colors duration-300">
           Vi hjelper bedrifter å implementere AI-løsninger som øker effektiviteten og gir konkurransefortrinn i dagens digitale verden.
         </p>
         <div className="text-center">
-          <Button className="bg-purple-800 hover:bg-purple-900 text-lg px-8 py-6 shadow-lg shadow-purple-800/30 transition-all hover:scale-105">
-            Kom i gang <ArrowRight className="ml-2" />
+          <Button className="bg-purple-800 hover:bg-purple-900 text-lg px-8 py-6 shadow-lg shadow-purple-800/30 transition-all hover:scale-105 duration-300">
+            Kom i gang <ArrowRight className="ml-2 animate-pulse" />
           </Button>
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Benefits Section with Hover Effects */}
       <section className="container mx-auto px-4 py-20">
-        <h2 className="text-4xl font-bold text-center mb-16 text-white">
+        <h2 className="text-4xl font-bold text-center mb-16 text-white hover:text-purple-300 transition-colors duration-300">
           Hvorfor velge AI?
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Card className="bg-gray-800/50 backdrop-blur border-gray-700 hover:bg-gray-700/50 transition-all hover:scale-105 group">
+          <Card className="bg-gray-800/50 backdrop-blur border-gray-700 hover:bg-gray-700/50 transition-all hover:scale-105 duration-300 group">
             <CardHeader>
               <CardTitle className="flex items-center gap-3 text-white">
-                <Timer className="text-purple-400 group-hover:scale-110 transition-transform" />
+                <Timer className="text-purple-400 group-hover:rotate-12 transition-transform duration-300" />
                 Økt Effektivitet
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-300 leading-relaxed">
-                Automatiser rutineoppgaver og frigjør verdifull tid for dine ansatte. La AI håndtere repetitive oppgaver mens teamet ditt fokuserer på strategisk arbeid.
+              <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300">
+                Automatiser rutineoppgaver og frigjør verdifull tid for dine ansatte.
               </p>
             </CardContent>
           </Card>
 
-          <Card className="bg-gray-800/50 backdrop-blur border-gray-700 hover:bg-gray-700/50 transition-all hover:scale-105 group">
+          <Card className="bg-gray-800/50 backdrop-blur border-gray-700 hover:bg-gray-700/50 transition-all hover:scale-105 duration-300 group">
             <CardHeader>
               <CardTitle className="flex items-center gap-3 text-white">
-                <TrendingUp className="text-purple-400 group-hover:scale-110 transition-transform" />
+                <TrendingUp className="text-purple-400 group-hover:rotate-12 transition-transform duration-300" />
                 Bedre Resultater
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-300 leading-relaxed">
-                Få dypere innsikt i data og ta bedre beslutninger med AI-drevet analyse. Utnytt maskinlæring for å avdekke skjulte mønstre og muligheter.
+              <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300">
+                Få dypere innsikt i data og ta bedre beslutninger med AI-drevet analyse.
               </p>
             </CardContent>
           </Card>
 
-          <Card className="bg-gray-800/50 backdrop-blur border-gray-700 hover:bg-gray-700/50 transition-all hover:scale-105 group">
+          <Card className="bg-gray-800/50 backdrop-blur border-gray-700 hover:bg-gray-700/50 transition-all hover:scale-105 duration-300 group">
             <CardHeader>
               <CardTitle className="flex items-center gap-3 text-white">
-                <Rocket className="text-purple-400 group-hover:scale-110 transition-transform" />
+                <Rocket className="text-purple-400 group-hover:rotate-12 transition-transform duration-300" />
                 Konkurransefortrinn
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-300 leading-relaxed">
-                Hold deg foran konkurrentene med innovative AI-løsninger. Vær først ute med å implementere fremtidens teknologi i din bransje.
+              <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300">
+                Hold deg foran konkurrentene med innovative AI-løsninger.
               </p>
             </CardContent>
           </Card>
         </div>
       </section>
 
-      {/* How to Get Started */}
+      {/* How to Get Started with Glassmorphism */}
       <section className="container mx-auto px-4 py-20">
-        <div className="bg-gray-800/50 backdrop-blur rounded-2xl p-12 shadow-xl">
+        <div className="bg-gray-800/50 backdrop-blur rounded-2xl p-12 shadow-xl hover:bg-gray-700/50 transition-all duration-500">
           <h2 className="text-4xl font-bold text-center mb-16 text-white">Slik kommer du i gang</h2>
           <div className="max-w-3xl mx-auto space-y-12">
-            <div className="flex items-start gap-6 group">
-              <div className="bg-purple-800/20 p-4 rounded-xl">
-                <Brain className="text-purple-400 w-8 h-8 group-hover:scale-110 transition-transform" />
+            <div className="flex items-start gap-6 group hover:translate-x-2 transition-transform duration-300">
+              <div className="bg-purple-800/20 p-4 rounded-xl group-hover:bg-purple-800/30 transition-colors duration-300">
+                <Brain className="text-purple-400 w-8 h-8 group-hover:scale-110 transition-transform duration-300" />
               </div>
               <div>
                 <h3 className="text-2xl font-semibold mb-4 text-white">1. Kartlegging</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Vi analyserer din bedrifts behov og identifiserer områder hvor AI kan gi størst verdi. Sammen utvikler vi en skreddersydd strategi for din virksomhet.
+                <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300">
+                  Vi analyserer din bedrifts behov og identifiserer områder hvor AI kan gi størst verdi.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-6 group">
-              <div className="bg-purple-800/20 p-4 rounded-xl">
-                <Timer className="text-purple-400 w-8 h-8 group-hover:scale-110 transition-transform" />
+            <div className="flex items-start gap-6 group hover:translate-x-2 transition-transform duration-300">
+              <div className="bg-purple-800/20 p-4 rounded-xl group-hover:bg-purple-800/30 transition-colors duration-300">
+                <Timer className="text-purple-400 w-8 h-8 group-hover:scale-110 transition-transform duration-300" />
               </div>
               <div>
                 <h3 className="text-2xl font-semibold mb-4 text-white">2. Implementering</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Vi hjelper deg med å velge og implementere de rette AI-løsningene for din bedrift. Vårt team sørger for en smidig overgang til nye systemer.
+                <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300">
+                  Vi hjelper deg med å velge og implementere de rette AI-løsningene for din bedrift.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-6 group">
-              <div className="bg-purple-800/20 p-4 rounded-xl">
-                <TrendingUp className="text-purple-400 w-8 h-8 group-hover:scale-110 transition-transform" />
+            <div className="flex items-start gap-6 group hover:translate-x-2 transition-transform duration-300">
+              <div className="bg-purple-800/20 p-4 rounded-xl group-hover:bg-purple-800/30 transition-colors duration-300">
+                <TrendingUp className="text-purple-400 w-8 h-8 group-hover:scale-110 transition-transform duration-300" />
               </div>
               <div>
                 <h3 className="text-2xl font-semibold mb-4 text-white">3. Opplæring og Oppfølging</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Vi sørger for at dine ansatte får den nødvendige opplæringen og støtten de trenger. Kontinuerlig oppfølging sikrer optimal utnyttelse av AI-verktøyene.
+                <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300">
+                  Vi sørger for at dine ansatte får den nødvendige opplæringen og støtten de trenger.
                 </p>
               </div>
             </div>
@@ -132,12 +132,14 @@ const Index = () => {
 
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-20 text-center">
-        <h2 className="text-4xl font-bold mb-8 text-white">Klar for å ta steget inn i fremtiden?</h2>
-        <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-          La oss hjelpe deg med å utnytte kraften i AI for å transformere din bedrift. Ta kontakt for en uforpliktende samtale.
+        <h2 className="text-4xl font-bold mb-8 text-white hover:text-purple-300 transition-colors duration-300">
+          Klar for å ta steget inn i fremtiden?
+        </h2>
+        <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto hover:text-white transition-colors duration-300">
+          La oss hjelpe deg med å utnytte kraften i AI for å transformere din bedrift.
         </p>
-        <Button className="bg-purple-800 hover:bg-purple-900 text-lg px-8 py-6 shadow-lg shadow-purple-800/30 transition-all hover:scale-105">
-          Book en gratis konsultasjon <ArrowRight className="ml-2" />
+        <Button className="bg-purple-800 hover:bg-purple-900 text-lg px-8 py-6 shadow-lg shadow-purple-800/30 transition-all hover:scale-105 duration-300">
+          Book en gratis konsultasjon <ArrowRight className="ml-2 animate-pulse" />
         </Button>
       </section>
     </div>
