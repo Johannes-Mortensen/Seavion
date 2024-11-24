@@ -32,10 +32,17 @@ export const HeroContent = () => {
     <div className="relative z-10 min-h-screen flex items-center px-4">
       {/* Background Cube */}
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none">
-        <div className="relative" style={{ perspective: "2000px", width: "500px", height: "500px" }}>
+        <div 
+          className="relative" 
+          style={{ 
+            perspective: "1000px",
+            width: "500px", 
+            height: "500px"
+          }}
+        >
           <div
             ref={cubeRef}
-            className="w-full h-full relative opacity-80"
+            className="absolute w-full h-full"
             style={{ 
               transformStyle: 'preserve-3d',
               transform: 'rotateX(45deg) rotateY(45deg)',
@@ -43,43 +50,78 @@ export const HeroContent = () => {
             }}
           >
             {/* Front face */}
-            <div className="absolute w-full h-full bg-transparent border-2 border-blue-400/40 shadow-lg backdrop-blur-[2px]"
-                 style={{ transform: 'translateZ(250px)' }}>
+            <div 
+              className="absolute w-full h-full bg-transparent border-2 border-blue-400/40 backdrop-blur-[2px]"
+              style={{ 
+                transform: 'translateZ(250px)',
+                backfaceVisibility: 'visible'
+              }}
+            >
               <div className="w-full h-full flex items-center justify-center text-blue-400/60 font-bold text-4xl">
                 AI
               </div>
             </div>
+            
             {/* Back face */}
-            <div className="absolute w-full h-full bg-transparent border-2 border-purple-400/40 shadow-lg backdrop-blur-[2px]"
-                 style={{ transform: 'translateZ(-250px) rotateY(180deg)' }}>
+            <div 
+              className="absolute w-full h-full bg-transparent border-2 border-purple-400/40 backdrop-blur-[2px]"
+              style={{ 
+                transform: 'translateZ(-250px) rotateY(180deg)',
+                backfaceVisibility: 'visible'
+              }}
+            >
               <div className="w-full h-full flex items-center justify-center text-purple-400/60 font-bold text-4xl">
                 Data
               </div>
             </div>
+            
             {/* Right face */}
-            <div className="absolute w-full h-full bg-transparent border-2 border-pink-400/40 shadow-lg backdrop-blur-[2px]"
-                 style={{ transform: 'translateX(250px) rotateY(90deg)' }}>
+            <div 
+              className="absolute w-full h-full bg-transparent border-2 border-pink-400/40 backdrop-blur-[2px]"
+              style={{ 
+                transform: 'rotateY(90deg) translateZ(250px)',
+                backfaceVisibility: 'visible'
+              }}
+            >
               <div className="w-full h-full flex items-center justify-center text-pink-400/60 font-bold text-4xl">
                 ML
               </div>
             </div>
+            
             {/* Left face */}
-            <div className="absolute w-full h-full bg-transparent border-2 border-blue-400/40 shadow-lg backdrop-blur-[2px]"
-                 style={{ transform: 'translateX(-250px) rotateY(-90deg)' }}>
+            <div 
+              className="absolute w-full h-full bg-transparent border-2 border-blue-400/40 backdrop-blur-[2px]"
+              style={{ 
+                transform: 'rotateY(-90deg) translateZ(250px)',
+                backfaceVisibility: 'visible'
+              }}
+            >
               <div className="w-full h-full flex items-center justify-center text-blue-400/60 font-bold text-4xl">
                 Cloud
               </div>
             </div>
+            
             {/* Top face */}
-            <div className="absolute w-full h-full bg-transparent border-2 border-purple-400/40 shadow-lg backdrop-blur-[2px]"
-                 style={{ transform: 'translateY(-250px) rotateX(90deg)' }}>
+            <div 
+              className="absolute w-full h-full bg-transparent border-2 border-purple-400/40 backdrop-blur-[2px]"
+              style={{ 
+                transform: 'rotateX(90deg) translateZ(250px)',
+                backfaceVisibility: 'visible'
+              }}
+            >
               <div className="w-full h-full flex items-center justify-center text-purple-400/60 font-bold text-4xl">
                 IoT
               </div>
             </div>
+            
             {/* Bottom face */}
-            <div className="absolute w-full h-full bg-transparent border-2 border-pink-400/40 shadow-lg backdrop-blur-[2px]"
-                 style={{ transform: 'translateY(250px) rotateX(-90deg)' }}>
+            <div 
+              className="absolute w-full h-full bg-transparent border-2 border-pink-400/40 backdrop-blur-[2px]"
+              style={{ 
+                transform: 'rotateX(-90deg) translateZ(250px)',
+                backfaceVisibility: 'visible'
+              }}
+            >
               <div className="w-full h-full flex items-center justify-center text-pink-400/60 font-bold text-4xl">
                 Edge
               </div>
