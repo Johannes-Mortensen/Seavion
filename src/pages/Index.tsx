@@ -7,7 +7,6 @@ const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simuler en kort lastetid
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 800);
@@ -25,37 +24,46 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 opacity-0 animate-[fadeIn_1s_ease-out_forwards]">
-      {/* Ocean Banner with Parallax Effect */}
-      <div className="w-full h-[50vh] relative mb-20 overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21"
-          alt="Ocean waves"
-          className="w-full h-full object-cover brightness-50 scale-105 hover:scale-100 transition-transform duration-700"
-        />
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-          <div className="max-w-4xl mx-auto px-4">
-            <h1 className="text-6xl font-bold text-white text-center mb-6">
-              Transformér Din Bedrift med AI
-            </h1>
-            <p className="text-xl text-gray-200 text-center">
-              Utnytt kraften i kunstig intelligens for å drive din virksomhet fremover
-            </p>
+      {/* Fullscreen Hero Section */}
+      <div className="h-screen relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb"
+            alt="Starry night sky"
+            className="w-full h-full object-cover brightness-[0.3] scale-105 transform transition-transform duration-[2s] hover:scale-110"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/50 to-gray-900" />
+        
+        <div className="relative z-10 h-full flex flex-col items-center justify-center px-4">
+          <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold text-white text-center mb-8 tracking-tight">
+            Fremtiden er AI
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-200 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+            La oss hjelpe deg med å utnytte kraften i kunstig intelligens for å transformere din virksomhet og sikre konkurransefortrinn i morgendagens marked.
+          </p>
+          <div className="flex gap-6">
+            <Button 
+              className="bg-white text-gray-900 hover:bg-gray-100 text-lg px-8 py-6 rounded-full transition-all hover:scale-105 duration-300"
+            >
+              Kom i gang
+              <ArrowRight className="ml-2 animate-pulse" />
+            </Button>
+            <Button 
+              variant="outline" 
+              className="border-white text-white hover:bg-white/10 text-lg px-8 py-6 rounded-full transition-all hover:scale-105 duration-300"
+            >
+              Les mer
+            </Button>
+          </div>
+          
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <ArrowRight className="w-8 h-8 text-white rotate-90" />
           </div>
         </div>
       </div>
 
-      {/* Main content section */}
-      <section className="container mx-auto px-4 pb-20">
-        <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto text-center leading-relaxed hover:text-white transition-colors duration-300">
-          Vi hjelper bedrifter å implementere AI-løsninger som øker effektiviteten og gir konkurransefortrinn i dagens digitale verden.
-        </p>
-        <div className="text-center">
-          <Button className="bg-purple-800 hover:bg-purple-900 text-lg px-8 py-6 shadow-lg shadow-purple-800/30 transition-all hover:scale-105 duration-300">
-            Kom i gang <ArrowRight className="ml-2 animate-pulse" />
-          </Button>
-        </div>
-      </section>
-
+      {/* Rest of the content */}
       {/* Benefits Section with Hover Effects */}
       <section className="container mx-auto px-4 py-20">
         <h2 className="text-4xl font-bold text-center mb-16 text-white hover:text-purple-300 transition-colors duration-300">
