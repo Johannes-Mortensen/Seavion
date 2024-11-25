@@ -14,7 +14,7 @@ export const Header = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const section = document.querySelector(id);
+    const section = document.querySelector(sectionId);
     section?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -26,11 +26,11 @@ export const Header = () => {
     <header 
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-colors duration-300",
-        isScrolled ? "bg-blue-900/95 backdrop-blur-sm shadow-lg" : "bg-transparent"
+        isScrolled ? "bg-gray-900/95 backdrop-blur-sm shadow-lg" : "bg-transparent"
       )}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-48">
           <button 
             onClick={scrollToTop}
             className="flex items-center"
@@ -38,7 +38,7 @@ export const Header = () => {
             <img 
               src="/logo.svg" 
               alt="Seavion Logo" 
-              className="h-16 w-auto"
+              className="h-[200px] w-auto"
             />
           </button>
 
