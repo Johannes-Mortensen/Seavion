@@ -31,14 +31,14 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
       {/* Header with Logo */}
-      <header className="fixed top-0 left-0 w-full z-50 bg-gray-900/80 backdrop-blur-sm">
+      <header className="fixed top-0 left-0 w-full z-50">
         <div className="container mx-auto px-4">
-          <div className="flex items-center h-20">
+          <div className="flex items-center h-32">
             <a href="/" className="flex items-center">
               <img 
                 src="/logo.svg" 
                 alt="Seavion Logo" 
-                className="h-12 w-auto"
+                className="h-24 w-auto"
               />
             </a>
           </div>
