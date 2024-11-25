@@ -19,17 +19,19 @@ export const HeroContent = () => {
 
   useEffect(() => {
     let lastTime = performance.now();
-    const ROTATION_SPEED = 0.05; // Reduced rotation speed for smoother animation
+    const ROTATION_SPEED = 0.02; // Reduced from 0.05 to 0.02 for slower rotation
 
     const animate = (currentTime: number) => {
       const deltaTime = currentTime - lastTime;
       lastTime = currentTime;
 
       if (cubeRef.current) {
-        rotationRef.current.x += ROTATION_SPEED * deltaTime;
-        rotationRef.current.y += ROTATION_SPEED * deltaTime;
+        // Use smaller increments for smoother animation
+        rotationRef.current.x += ROTATION_SPEED * (deltaTime / 16);
+        rotationRef.current.y += ROTATION_SPEED * (deltaTime / 16);
         
-        cubeRef.current.style.transform = `rotateX(${rotationRef.current.x}deg) rotateY(${rotationRef.current.y}deg)`;
+        // Use transform3d for better performance
+        cubeRef.current.style.transform = `translate3d(0,0,0) rotateX(${rotationRef.current.x}deg) rotateY(${rotationRef.current.y}deg)`;
       }
       animationRef.current = requestAnimationFrame(animate);
     };
@@ -53,7 +55,8 @@ export const HeroContent = () => {
             perspective: "1000px",
             width: "500px", 
             height: "500px",
-            willChange: "transform" // Optimize for animations
+            willChange: "transform",
+            transform: 'translateZ(0)'
           }}
         >
           <div
@@ -62,8 +65,9 @@ export const HeroContent = () => {
             style={{ 
               transformStyle: 'preserve-3d',
               transform: 'rotateX(45deg) rotateY(45deg)',
-              backfaceVisibility: 'hidden', // Improve performance
-              willChange: 'transform' // Optimize for animations
+              backfaceVisibility: 'hidden',
+              willChange: 'transform',
+              transition: 'transform 0.1s linear'
             }}
           >
             {/* Cube faces with optimized rendering */}
@@ -84,7 +88,8 @@ export const HeroContent = () => {
                   boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)',
                   background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)',
                   backfaceVisibility: 'hidden',
-                  willChange: 'transform'
+                  willChange: 'transform',
+                  transform: `${style.transform} translateZ(0)`,
                 }}
               />
             ))}
