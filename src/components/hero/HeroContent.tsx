@@ -19,7 +19,7 @@ export const HeroContent = () => {
 
   useEffect(() => {
     let lastTime = performance.now();
-    const ROTATION_SPEED = 0.035; // Økt fra 0.02 til 0.035 for litt raskere rotasjon
+    const ROTATION_SPEED = 0.05; // Økt fra 0.035 til 0.05 for raskere rotasjon
 
     const animate = (currentTime: number) => {
       const deltaTime = currentTime - lastTime;
