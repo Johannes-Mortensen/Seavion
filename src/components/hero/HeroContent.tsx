@@ -4,6 +4,8 @@ import { useEffect, useRef } from "react";
 
 export const HeroContent = () => {
   const cubeRef = useRef<HTMLDivElement>(null);
+  const animationRef = useRef<number>();
+  const rotationRef = useRef({ x: 45, y: 45 });
 
   const scrollToContact = () => {
     const contactSection = document.querySelector('#contact-section');
@@ -16,24 +18,27 @@ export const HeroContent = () => {
   };
 
   useEffect(() => {
-    let animationFrame: number;
-    let rotationX = 45;
-    let rotationY = 45;
+    let lastTime = performance.now();
+    const ROTATION_SPEED = 0.05; // Reduced rotation speed for smoother animation
 
-    const animate = () => {
+    const animate = (currentTime: number) => {
+      const deltaTime = currentTime - lastTime;
+      lastTime = currentTime;
+
       if (cubeRef.current) {
-        rotationX += 0.2;
-        rotationY += 0.2;
-        cubeRef.current.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+        rotationRef.current.x += ROTATION_SPEED * deltaTime;
+        rotationRef.current.y += ROTATION_SPEED * deltaTime;
+        
+        cubeRef.current.style.transform = `rotateX(${rotationRef.current.x}deg) rotateY(${rotationRef.current.y}deg)`;
       }
-      animationFrame = requestAnimationFrame(animate);
+      animationRef.current = requestAnimationFrame(animate);
     };
 
-    animate();
+    animationRef.current = requestAnimationFrame(animate);
 
     return () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
       }
     };
   }, []);
@@ -47,7 +52,8 @@ export const HeroContent = () => {
           style={{ 
             perspective: "1000px",
             width: "500px", 
-            height: "500px"
+            height: "500px",
+            willChange: "transform" // Optimize for animations
           }}
         >
           <div
@@ -56,69 +62,32 @@ export const HeroContent = () => {
             style={{ 
               transformStyle: 'preserve-3d',
               transform: 'rotateX(45deg) rotateY(45deg)',
-              transition: 'transform 0.1s ease'
+              backfaceVisibility: 'hidden', // Improve performance
+              willChange: 'transform' // Optimize for animations
             }}
           >
-            {/* Cube edges with glowing effect */}
-            <div 
-              className="absolute w-full h-full"
-              style={{
-                transform: 'translateZ(250px)',
-                border: '1px solid rgba(34, 211, 238, 0.3)',
-                boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)',
-                background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)',
-              }}
-            />
-            
-            <div 
-              className="absolute w-full h-full"
-              style={{
-                transform: 'translateZ(-250px) rotateY(180deg)',
-                border: '1px solid rgba(34, 211, 238, 0.3)',
-                boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)',
-                background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)',
-              }}
-            />
-            
-            <div 
-              className="absolute w-full h-full"
-              style={{
-                transform: 'rotateY(90deg) translateZ(250px)',
-                border: '1px solid rgba(34, 211, 238, 0.3)',
-                boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)',
-                background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)',
-              }}
-            />
-            
-            <div 
-              className="absolute w-full h-full"
-              style={{
-                transform: 'rotateY(-90deg) translateZ(250px)',
-                border: '1px solid rgba(34, 211, 238, 0.3)',
-                boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)',
-                background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)',
-              }}
-            />
-            
-            <div 
-              className="absolute w-full h-full"
-              style={{
-                transform: 'rotateX(90deg) translateZ(250px)',
-                border: '1px solid rgba(34, 211, 238, 0.3)',
-                boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)',
-                background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)',
-              }}
-            />
-            
-            <div 
-              className="absolute w-full h-full"
-              style={{
-                transform: 'rotateX(-90deg) translateZ(250px)',
-                border: '1px solid rgba(34, 211, 238, 0.3)',
-                boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)',
-                background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)',
-              }}
-            />
+            {/* Cube faces with optimized rendering */}
+            {[
+              { transform: 'translateZ(250px)' },
+              { transform: 'translateZ(-250px) rotateY(180deg)' },
+              { transform: 'rotateY(90deg) translateZ(250px)' },
+              { transform: 'rotateY(-90deg) translateZ(250px)' },
+              { transform: 'rotateX(90deg) translateZ(250px)' },
+              { transform: 'rotateX(-90deg) translateZ(250px)' }
+            ].map((style, index) => (
+              <div 
+                key={index}
+                className="absolute w-full h-full"
+                style={{
+                  ...style,
+                  border: '1px solid rgba(34, 211, 238, 0.3)',
+                  boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)',
+                  background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)',
+                  backfaceVisibility: 'hidden',
+                  willChange: 'transform'
+                }}
+              />
+            ))}
           </div>
         </div>
       </div>
