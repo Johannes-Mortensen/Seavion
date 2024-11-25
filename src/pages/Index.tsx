@@ -38,7 +38,7 @@ const Index = () => {
               <img 
                 src="/logo.svg" 
                 alt="Seavion Logo" 
-                className="h-40 w-auto"
+                className="h-[200px] w-auto"
               />
             </a>
           </div>
