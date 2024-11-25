@@ -5,6 +5,7 @@ import { HeroContent } from "@/components/hero/HeroContent";
 import { WhySection } from "@/components/sections/WhySection";
 import { SolutionsSection } from "@/components/sections/SolutionsSection";
 import { AboutUsSection } from "@/components/sections/AboutUsSection";
+import { ContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/Footer";
 import { ArrowRight } from "lucide-react";
 
@@ -55,6 +56,7 @@ const Index = () => {
       </div>
 
       <AboutUsSection />
+      <ContactSection />
       <Footer />
     </div>
   );
