@@ -33,12 +33,12 @@ const Index = () => {
       {/* Header with Logo */}
       <header className="fixed top-0 left-0 w-full z-50">
         <div className="container mx-auto px-4">
-          <div className="flex items-center h-32">
+          <div className="flex items-center h-48">
             <a href="/" className="flex items-center">
               <img 
                 src="/logo.svg" 
                 alt="Seavion Logo" 
-                className="h-24 w-auto"
+                className="h-40 w-auto"
               />
             </a>
           </div>
