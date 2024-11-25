@@ -19,18 +19,29 @@ export const HeroContent = () => {
 
   useEffect(() => {
     let lastTime = performance.now();
-    const ROTATION_SPEED = 0.065; // Økt fra 0.05 til 0.065 for enda raskere rotasjon
+    const ROTATION_SPEED = 0.065;
 
     const animate = (currentTime: number) => {
       const deltaTime = currentTime - lastTime;
       lastTime = currentTime;
 
       if (cubeRef.current) {
-        rotationRef.current.x += ROTATION_SPEED * (deltaTime / 16);
-        rotationRef.current.y += ROTATION_SPEED * (deltaTime / 16);
+        // Bruk requestAnimationFrame's timestamp for mer presis timing
+        rotationRef.current.x += ROTATION_SPEED * (deltaTime / 16.667); // Normaliser til 60 FPS
+        rotationRef.current.y += ROTATION_SPEED * (deltaTime / 16.667);
         
-        cubeRef.current.style.transform = `translate3d(0,0,0) rotateX(${rotationRef.current.x}deg) rotateY(${rotationRef.current.y}deg)`;
+        // Optimaliser transform ved å bruke matrix3d istedenfor separate transformasjoner
+        const transform = `matrix3d(
+          ${Math.cos(rotationRef.current.y)}, 0, ${Math.sin(rotationRef.current.y)}, 0,
+          0, 1, 0, 0,
+          ${-Math.sin(rotationRef.current.y)}, 0, ${Math.cos(rotationRef.current.y)}, 0,
+          0, 0, 0, 1
+        )`;
+        
+        cubeRef.current.style.transform = transform;
       }
+      
+      // Bruk requestAnimationFrame med høy prioritet
       animationRef.current = requestAnimationFrame(animate);
     };
 
@@ -54,7 +65,8 @@ export const HeroContent = () => {
             width: "500px", 
             height: "500px",
             willChange: "transform",
-            transform: 'translateZ(0)'
+            transform: 'translateZ(0)',
+            backfaceVisibility: 'hidden',
           }}
         >
           <div
@@ -65,7 +77,7 @@ export const HeroContent = () => {
               transform: 'rotateX(45deg) rotateY(45deg)',
               backfaceVisibility: 'hidden',
               willChange: 'transform',
-              transition: 'transform 0.1s linear'
+              transition: 'transform 0.016s linear'
             }}
           >
             {/* Cube faces with optimized rendering */}
