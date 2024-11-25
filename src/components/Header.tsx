@@ -33,7 +33,7 @@ export const Header = () => {
         <div className="flex items-center justify-between h-24">
           <button 
             onClick={scrollToTop}
-            className="flex items-center absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+            className="flex items-center"
           >
             <img 
               src="/logo.svg" 
