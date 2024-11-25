@@ -36,7 +36,7 @@ const Index = () => {
           <div className="flex items-center h-20">
             <a href="/" className="flex items-center">
               <img 
-                src="/og-image.svg" 
+                src="/logo.svg" 
                 alt="Seavion Logo" 
                 className="h-12 w-auto"
               />
