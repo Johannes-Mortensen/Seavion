@@ -14,7 +14,6 @@ export const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Her kan du legge til logikk for å sende skjemadata
     toast({
       title: "Melding mottatt!",
       description: "Vi vil kontakte deg så snart som mulig.",
@@ -23,7 +22,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-800 to-gray-900">
+    <section id="contact-section" className="py-20 bg-gradient-to-b from-gray-800 to-gray-900">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-white mb-8">

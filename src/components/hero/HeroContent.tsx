@@ -5,6 +5,16 @@ import { useEffect, useRef } from "react";
 export const HeroContent = () => {
   const cubeRef = useRef<HTMLDivElement>(null);
 
+  const scrollToContact = () => {
+    const contactSection = document.querySelector('#contact-section');
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToWhy = () => {
+    const whySection = document.querySelector('#why-section');
+    whySection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   useEffect(() => {
     let animationFrame: number;
     let rotationX = 45;
@@ -130,6 +140,7 @@ export const HeroContent = () => {
           <Button
             size="lg"
             className="bg-blue-600 hover:bg-blue-700 text-white transform transition-all duration-300 hover:scale-105 hover:shadow-lg w-fit"
+            onClick={scrollToContact}
           >
             Kom i gang <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
@@ -137,6 +148,7 @@ export const HeroContent = () => {
             size="lg"
             variant="outline"
             className="bg-transparent hover:bg-black/10 border-black text-white transform transition-all duration-300 hover:scale-105 hover:shadow-lg w-fit"
+            onClick={scrollToWhy}
           >
             Les mer om oss
           </Button>
