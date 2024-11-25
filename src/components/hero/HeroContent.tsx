@@ -19,18 +19,16 @@ export const HeroContent = () => {
 
   useEffect(() => {
     let lastTime = performance.now();
-    const ROTATION_SPEED = 0.02; // Reduced from 0.05 to 0.02 for slower rotation
+    const ROTATION_SPEED = 0.035; // Økt fra 0.02 til 0.035 for litt raskere rotasjon
 
     const animate = (currentTime: number) => {
       const deltaTime = currentTime - lastTime;
       lastTime = currentTime;
 
       if (cubeRef.current) {
-        // Use smaller increments for smoother animation
         rotationRef.current.x += ROTATION_SPEED * (deltaTime / 16);
         rotationRef.current.y += ROTATION_SPEED * (deltaTime / 16);
         
-        // Use transform3d for better performance
         cubeRef.current.style.transform = `translate3d(0,0,0) rotateX(${rotationRef.current.x}deg) rotateY(${rotationRef.current.y}deg)`;
       }
       animationRef.current = requestAnimationFrame(animate);
