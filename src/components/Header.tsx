@@ -30,10 +30,10 @@ export const Header = () => {
       )}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-48">
+        <div className="flex items-center justify-between h-24">
           <button 
             onClick={scrollToTop}
-            className="flex items-center"
+            className="flex items-center -mt-8"
           >
             <img 
               src="/logo.svg" 
