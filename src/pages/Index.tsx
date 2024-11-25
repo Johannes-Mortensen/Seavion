@@ -30,6 +30,21 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
+      {/* Header with Logo */}
+      <header className="fixed top-0 left-0 w-full z-50 bg-gray-900/80 backdrop-blur-sm">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center h-20">
+            <a href="/" className="flex items-center">
+              <img 
+                src="/og-image.svg" 
+                alt="Seavion Logo" 
+                className="h-12 w-auto"
+              />
+            </a>
+          </div>
+        </div>
+      </header>
+
       {/* Hero Section */}
       <div className="h-screen relative overflow-hidden">
         <div className="absolute inset-0 z-0">
