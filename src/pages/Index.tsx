@@ -7,7 +7,7 @@ import { SolutionsSection } from "@/components/sections/SolutionsSection";
 import { AboutUsSection } from "@/components/sections/AboutUsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/Footer";
-import { ArrowRight } from "lucide-react";
+import { Header } from "@/components/Header";
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,20 +30,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
-      {/* Header with Logo */}
-      <header className="fixed top-0 left-0 w-full z-50">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center h-48">
-            <a href="/" className="flex items-center">
-              <img 
-                src="/logo.svg" 
-                alt="Seavion Logo" 
-                className="h-[200px] w-auto"
-              />
-            </a>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <div className="h-screen relative overflow-hidden">
