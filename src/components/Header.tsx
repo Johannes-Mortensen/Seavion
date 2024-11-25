@@ -33,7 +33,7 @@ export const Header = () => {
         <div className="flex items-center justify-between h-24">
           <button 
             onClick={scrollToTop}
-            className="flex items-center -mt-8"
+            className="flex items-center absolute left-1/2 -translate-x-1/2 -mt-8"
           >
             <img 
               src="/logo.svg" 
@@ -42,7 +42,7 @@ export const Header = () => {
             />
           </button>
 
-          <nav className="flex items-center space-x-8">
+          <nav className="flex items-center space-x-8 ml-auto">
             <button
               onClick={() => scrollToSection("#why-section")}
               className="text-white hover:text-blue-300 transition-colors"
