@@ -48,7 +48,7 @@ export const HeroContent = () => {
       {/* Background Cube - Extremely small on mobile */}
       <div className="absolute inset-0 flex items-center justify-center translate-x-0 md:translate-x-32 overflow-hidden pointer-events-none">
         <div 
-          className="relative scale-[0.008] md:scale-100" 
+          className="relative scale-[0.004] md:scale-100" 
           style={{ 
             perspective: "1000px",
             width: "500px", 
@@ -67,13 +67,13 @@ export const HeroContent = () => {
               willChange: 'transform'
             }}
           >
-            {/* Cube faces */}
-            <div className="absolute w-full h-full" style={{ transform: 'translateZ(250px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)', background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)', backfaceVisibility: 'hidden' }} />
-            <div className="absolute w-full h-full" style={{ transform: 'translateZ(-250px) rotateY(180deg)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)', background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)', backfaceVisibility: 'hidden' }} />
-            <div className="absolute w-full h-full" style={{ transform: 'rotateY(90deg) translateZ(250px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)', background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)', backfaceVisibility: 'hidden' }} />
-            <div className="absolute w-full h-full" style={{ transform: 'rotateY(-90deg) translateZ(250px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)', background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)', backfaceVisibility: 'hidden' }} />
-            <div className="absolute w-full h-full" style={{ transform: 'rotateX(90deg) translateZ(250px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)', background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)', backfaceVisibility: 'hidden' }} />
-            <div className="absolute w-full h-full" style={{ transform: 'rotateX(-90deg) translateZ(250px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)', background: 'linear-gradient(45deg, rgba(34, 211, 238, 0.1), transparent)', backfaceVisibility: 'hidden' }} />
+            {/* Cube faces with adjusted styles for seamless appearance */}
+            <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" style={{ transform: 'translateZ(250px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)', backfaceVisibility: 'hidden' }} />
+            <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" style={{ transform: 'translateZ(-250px) rotateY(180deg)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)', backfaceVisibility: 'hidden' }} />
+            <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" style={{ transform: 'rotateY(90deg) translateZ(250px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)', backfaceVisibility: 'hidden' }} />
+            <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" style={{ transform: 'rotateY(-90deg) translateZ(250px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)', backfaceVisibility: 'hidden' }} />
+            <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" style={{ transform: 'rotateX(90deg) translateZ(250px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)', backfaceVisibility: 'hidden' }} />
+            <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" style={{ transform: 'rotateX(-90deg) translateZ(250px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)', backfaceVisibility: 'hidden' }} />
           </div>
         </div>
       </div>
