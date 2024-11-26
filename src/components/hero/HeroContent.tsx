@@ -29,7 +29,7 @@ export const HeroContent = () => {
         rotationRef.current.x += ROTATION_SPEED * (deltaTime / 16);
         rotationRef.current.y += ROTATION_SPEED * (deltaTime / 16);
         
-        cubeRef.current.style.transform = `translate3d(0,0,0) rotateX(${rotationRef.current.x}deg) rotateY(${rotationRef.current.y}deg)`;
+        cubeRef.current.style.transform = `rotateX(${rotationRef.current.x}deg) rotateY(${rotationRef.current.y}deg)`;
       }
       animationRef.current = requestAnimationFrame(animate);
     };
@@ -48,13 +48,13 @@ export const HeroContent = () => {
       {/* Background Cube - Extremely small on mobile */}
       <div className="absolute inset-0 flex items-center justify-center translate-x-0 md:translate-x-32 overflow-visible pointer-events-none">
         <div 
-          className="relative scale-[0.001] md:scale-100" 
+          className="relative scale-[0.0005] md:scale-100" 
           style={{ 
             perspective: "1000px",
             width: "500px", 
             height: "500px",
             willChange: "transform",
-            transform: 'translateZ(0)',
+            transform: 'translateZ(0) scale(0.5)',
             transformOrigin: 'center center'
           }}
         >
