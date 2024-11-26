@@ -45,10 +45,10 @@ export const HeroContent = () => {
 
   return (
     <div className="relative z-10 min-h-screen flex items-center px-4">
-      {/* Background Cube - Now visible on all screens but smaller on mobile */}
-      <div className="absolute inset-0 flex items-center justify-center translate-x-8 md:translate-x-32 overflow-hidden pointer-events-none">
+      {/* Background Cube - Now much smaller on mobile */}
+      <div className="absolute inset-0 flex items-center justify-center translate-x-4 md:translate-x-32 overflow-hidden pointer-events-none">
         <div 
-          className="relative scale-50 md:scale-100" 
+          className="relative scale-[0.25] md:scale-100" 
           style={{ 
             perspective: "1000px",
             width: "500px", 
