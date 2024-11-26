@@ -45,10 +45,10 @@ export const HeroContent = () => {
 
   return (
     <div className="relative z-10 min-h-screen flex items-center px-4">
-      {/* Background Cube - Hidden on mobile, visible from medium screens */}
-      <div className="absolute inset-0 hidden md:flex items-center justify-center translate-x-32 overflow-hidden pointer-events-none">
+      {/* Background Cube - Now visible on all screens but smaller on mobile */}
+      <div className="absolute inset-0 flex items-center justify-center translate-x-8 md:translate-x-32 overflow-hidden pointer-events-none">
         <div 
-          className="relative" 
+          className="relative scale-50 md:scale-100" 
           style={{ 
             perspective: "1000px",
             width: "500px", 
@@ -95,7 +95,7 @@ export const HeroContent = () => {
         </div>
       </div>
 
-      {/* Left side content - Improved mobile responsiveness */}
+      {/* Left side content */}
       <div className="w-full md:w-1/2 space-y-6 text-left px-4 md:pl-16 mt-16 md:mt-32">
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 md:mb-6 animate-fade-in opacity-0 text-white" 
             style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>

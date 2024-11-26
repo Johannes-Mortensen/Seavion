@@ -44,22 +44,22 @@ export const Header = () => {
             />
           </button>
 
-          <nav className="flex items-center space-x-8 ml-auto">
+          <nav className="flex items-center space-x-4 md:space-x-8 ml-auto">
             <button
               onClick={() => scrollToSection("#why-section")}
-              className="text-white hover:text-blue-300 transition-colors"
+              className="text-sm md:text-base text-white hover:text-blue-300 transition-colors"
             >
               Om oss
             </button>
             <button
               onClick={() => scrollToSection("#solutions-section")}
-              className="text-white hover:text-blue-300 transition-colors"
+              className="text-sm md:text-base text-white hover:text-blue-300 transition-colors"
             >
               Tjenester
             </button>
             <button
               onClick={() => scrollToSection("#contact-section")}
-              className="text-white hover:text-blue-300 transition-colors"
+              className="text-sm md:text-base text-white hover:text-blue-300 transition-colors"
             >
               Kontakt oss
             </button>
