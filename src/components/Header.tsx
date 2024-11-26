@@ -32,7 +32,7 @@ export const Header = () => {
       )}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-16">
           <button 
             onClick={scrollToTop}
             className="flex items-center"
@@ -40,26 +40,26 @@ export const Header = () => {
             <img 
               src="/logo.svg" 
               alt="Seavion Logo" 
-              className="h-[200px] w-auto"
+              className="h-[100px] w-auto"
             />
           </button>
 
-          <nav className="flex items-center space-x-4 md:space-x-8 ml-auto">
+          <nav className="flex items-center space-x-6 ml-auto">
             <button
               onClick={() => scrollToSection("#why-section")}
-              className="text-xs md:text-base text-white hover:text-blue-300 transition-colors"
+              className="text-xs md:text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
             >
               Om oss
             </button>
             <button
               onClick={() => scrollToSection("#solutions-section")}
-              className="text-xs md:text-base text-white hover:text-blue-300 transition-colors"
+              className="text-xs md:text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
             >
               Tjenester
             </button>
             <button
               onClick={() => scrollToSection("#contact-section")}
-              className="text-xs md:text-base text-white hover:text-blue-300 transition-colors"
+              className="text-xs md:text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
             >
               Kontakt oss
             </button>
