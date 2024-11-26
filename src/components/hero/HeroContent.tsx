@@ -48,13 +48,13 @@ export const HeroContent = () => {
       {/* Background Cube - Extremely small on mobile */}
       <div className="absolute inset-0 flex items-center justify-center translate-x-0 md:translate-x-32 overflow-visible pointer-events-none">
         <div 
-          className="relative scale-[0.0003] md:scale-100" 
+          className="relative scale-[0.0002] md:scale-100" 
           style={{ 
             perspective: "1000px",
             width: "500px", 
             height: "500px",
             willChange: "transform",
-            transform: 'translateZ(0) scale(0.5)',
+            transform: 'translateZ(0)',
             transformOrigin: 'center center'
           }}
         >
