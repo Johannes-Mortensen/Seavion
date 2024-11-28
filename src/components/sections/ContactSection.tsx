@@ -86,9 +86,14 @@ export const ContactSection = () => {
               </Avatar>
               <h3 className="text-2xl font-semibold text-white mb-2">Johannes Mortensen Flessen</h3>
               <p className="text-gray-400 mb-4">Kundeansvarlig</p>
-              <div className="flex items-center justify-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors">
-                <Mail className="h-5 w-5" />
-                <a href="mailto:johannes@seavion.no" className="text-lg">johannes@seavion.no</a>
+              <div className="flex flex-col items-center space-y-2">
+                <div className="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors">
+                  <Mail className="h-5 w-5" />
+                  <a href="mailto:johannesflessen@hotmail.no" className="text-lg">johannesflessen@hotmail.no</a>
+                </div>
+                <div className="text-blue-400">
+                  <a href="tel:+4740059901" className="text-lg hover:text-blue-300 transition-colors">+47 400 59 901</a>
+                </div>
               </div>
             </div>
           </div>
