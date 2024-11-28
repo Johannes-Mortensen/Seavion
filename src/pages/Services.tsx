@@ -35,14 +35,23 @@ const Services = () => {
             </Button>
           </div>
           
-          {/* Placeholder for fremtidige tjenester */}
-          <div className="bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-8">
+          <div 
+            className="bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-8 hover:bg-gray-700/50 transition-all cursor-pointer"
+            onClick={() => navigate("/services/automation")}
+          >
             <h3 className="text-2xl font-semibold text-white mb-4">
-              Kommer snart
+              Automatisering
             </h3>
-            <p className="text-gray-300">
-              Flere spennende tjenester er under utvikling.
+            <p className="text-gray-300 mb-6">
+              Effektiviser din virksomhet med smarte automatiseringsløsninger og moderne teknologi.
             </p>
+            <Button 
+              variant="outline"
+              onClick={() => navigate("/services/automation")}
+              className="text-blue-400 border-blue-400 hover:bg-blue-400/10"
+            >
+              Les mer
+            </Button>
           </div>
         </div>
       </main>

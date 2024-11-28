@@ -48,7 +48,7 @@ export const Header = () => {
             <img 
               src="/logo.svg" 
               alt="Seavion Logo" 
-              className="h-24 w-auto md:h-32 transition-all duration-300"
+              className="h-32 w-auto md:h-40 transition-all duration-300"
             />
           </button>
 
