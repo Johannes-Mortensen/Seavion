@@ -84,11 +84,11 @@ export const ContactSection = () => {
                 <AvatarImage src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" alt="Contact Person" />
                 <AvatarFallback>CP</AvatarFallback>
               </Avatar>
-              <h3 className="text-2xl font-semibold text-white mb-2">Sarah Johnson</h3>
+              <h3 className="text-2xl font-semibold text-white mb-2">Johannes Mortensen Flessen</h3>
               <p className="text-gray-400 mb-4">Kundeansvarlig</p>
               <div className="flex items-center justify-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors">
                 <Mail className="h-5 w-5" />
-                <a href="mailto:sarah@seavion.no" className="text-lg">sarah@seavion.no</a>
+                <a href="mailto:johannes@seavion.no" className="text-lg">johannes@seavion.no</a>
               </div>
             </div>
           </div>
