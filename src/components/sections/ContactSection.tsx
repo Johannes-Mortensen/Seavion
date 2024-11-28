@@ -85,7 +85,6 @@ export const ContactSection = () => {
                 <AvatarFallback>CP</AvatarFallback>
               </Avatar>
               <h3 className="text-2xl font-semibold text-white mb-2">Johannes Mortensen Flessen</h3>
-              <p className="text-gray-400 mb-4">Kundeansvarlig</p>
               <div className="flex flex-col items-center space-y-2">
                 <div className="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors">
                   <Mail className="h-5 w-5" />
