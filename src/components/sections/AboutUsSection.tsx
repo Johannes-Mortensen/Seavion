@@ -33,10 +33,13 @@ export const AboutUsSection = () => {
             Vår historie
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Med base i teknologihovedstaden Trondheim, utnytter Seavion den unike nærheten til NTNU og det ledende teknologimiljøet. Vi bygger bro mellom akademisk ekspertise og praktiske forretningsløsninger.
+            Seavion ble grunnlagt av studenter fra NTNU, Norges fremste teknologiske universitet, med en visjon om å bruke den omfattende kompetansen fra ulike fagfelt ved NTNU for å løse komplekse problemstillinger innen kunstig intelligens.
+          </p>
+          <p className="text-gray-400 mb-8">
+            Med vår base i teknologihovedstaden Trondheim, utnytter vi nærhet til verdensledende forskningsmiljøer og banebrytende teknologi for å levere innovative AI-løsninger. Gjennom tverrfaglig samarbeid og tilgang til NTNU sitt brede spekter av ekspertise, utvikler vi løsninger som ikke bare adresserer dagens utfordringer, men også skaper varige verdier for fremtiden.
           </p>
           <p className="text-gray-400">
-            Vår lokasjon i hjertet av Trondheim gir oss direkte tilgang til Norges fremste teknologiske kompetanse. Ved å kombinere NTNUs forskningskompetanse med vår praktiske erfaring, leverer vi innovative løsninger som skaper reell verdi for våre kunder. Fra små bedrifter til store konsern, er vårt mål å gjøre avansert teknologi tilgjengelig og nyttig for alle.
+            Vårt mål er enkelt: å kombinere akademisk dybde med praktisk anvendelse for å hjelpe bedrifter å nå nye høyder gjennom smartere, mer effektive løsninger.
           </p>
         </div>
 

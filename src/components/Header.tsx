@@ -32,7 +32,7 @@ export const Header = () => {
       )}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <button 
             onClick={scrollToTop}
             className="flex items-center"
@@ -40,7 +40,7 @@ export const Header = () => {
             <img 
               src="/logo.svg" 
               alt="Seavion Logo" 
-              className="h-8 w-auto md:h-10 transition-all duration-300"
+              className="h-12 w-auto md:h-16 transition-all duration-300"
             />
           </button>
 
