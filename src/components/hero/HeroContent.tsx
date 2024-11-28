@@ -78,12 +78,12 @@ export const HeroContent = () => {
 
       {/* Left side content */}
       <div className="w-full md:w-1/2 space-y-6 text-left px-4 md:pl-16 mt-16 md:mt-32">
-        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 md:mb-6 animate-fade-in opacity-0 text-white" 
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 animate-fade-in opacity-0 text-white" 
             style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
           Utnytt kraften i AI – skap fremtiden i dag
         </h1>
         
-        <p className="text-lg sm:text-xl md:text-2xl max-w-xl mb-6 md:mb-8 animate-fade-in opacity-0 text-white/90"
+        <p className="text-base sm:text-lg md:text-xl max-w-xl mb-6 md:mb-8 animate-fade-in opacity-0 text-white/90"
            style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
           Seavion leverer AI- og dataløsninger som driver vekst i enhver bransje.
         </p>
