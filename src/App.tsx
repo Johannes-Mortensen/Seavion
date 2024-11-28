@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
 import AIAnalytics from "./pages/AIAnalytics";
+import Automation from "./pages/Automation";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/ai-analytics" element={<AIAnalytics />} />
+          <Route path="/services/automation" element={<Automation />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
