@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,14 +16,20 @@ export const Header = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const section = document.querySelector(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+    if (window.location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const section = document.querySelector(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const section = document.querySelector(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
     }
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -34,7 +42,7 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <button 
-            onClick={scrollToTop}
+            onClick={() => navigate("/")}
             className="flex items-center"
           >
             <img 
@@ -46,16 +54,16 @@ export const Header = () => {
 
           <nav className="flex items-center space-x-6 ml-auto">
             <button
+              onClick={() => navigate("/services")}
+              className="text-xs md:text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
+            >
+              Tjenester
+            </button>
+            <button
               onClick={() => scrollToSection("#why-section")}
               className="text-xs md:text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
             >
               Om oss
-            </button>
-            <button
-              onClick={() => scrollToSection("#solutions-section")}
-              className="text-xs md:text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
-            >
-              Tjenester
             </button>
             <button
               onClick={() => scrollToSection("#contact-section")}
