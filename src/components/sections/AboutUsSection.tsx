@@ -33,10 +33,10 @@ export const AboutUsSection = () => {
             Vår historie
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Seavion ble grunnlagt med en visjon om å bygge bro mellom teknologi og menneskelige behov. Vi har siden vokst til å bli en betrodd partner for bedrifter som ønsker å ligge foran i en stadig mer datadrevet verden.
+            Med base i teknologihovedstaden Trondheim, utnytter Seavion den unike nærheten til NTNU og det ledende teknologimiljøet. Vi bygger bro mellom akademisk ekspertise og praktiske forretningsløsninger.
           </p>
           <p className="text-gray-400">
-            Fra små bedrifter til store konsern, leverer vi skreddersydde løsninger som skaper verdi. Med et team av eksperter innen teknologi og forretningsutvikling, er vårt mål å gjøre data til din største konkurransefordel.
+            Vår lokasjon i hjertet av Trondheim gir oss direkte tilgang til Norges fremste teknologiske kompetanse. Ved å kombinere NTNUs forskningskompetanse med vår praktiske erfaring, leverer vi innovative løsninger som skaper reell verdi for våre kunder. Fra små bedrifter til store konsern, er vårt mål å gjøre avansert teknologi tilgjengelig og nyttig for alle.
           </p>
         </div>
 
