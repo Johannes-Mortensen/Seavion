@@ -1,30 +1,7 @@
-import { Users, Target, Award, Globe } from "lucide-react";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Quote } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 export const AboutUsSection = () => {
-  const stats = [
-    {
-      icon: <Users className="w-8 h-8 text-blue-500" />,
-      number: "10+",
-      label: "Dedikerte eksperter"
-    },
-    {
-      icon: <Target className="w-8 h-8 text-green-500" />,
-      number: "90%",
-      label: "Kundetilfredshet"
-    },
-    {
-      icon: <Award className="w-8 h-8 text-yellow-500" />,
-      number: "3+",
-      label: "Års erfaring"
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-purple-500" />,
-      number: "20+",
-      label: "Vellykkede prosjekter"
-    }
-  ];
-
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
       <div className="container mx-auto px-4">
@@ -43,19 +20,17 @@ export const AboutUsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <Card key={index} className="bg-gray-800/50 border-gray-700 hover:bg-gray-700/50 transition-all duration-300">
-              <CardHeader className="flex items-center justify-center">
-                {stat.icon}
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-3xl font-bold text-white mb-2">{stat.number}</p>
-                <p className="text-gray-400">{stat.label}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        <Card className="max-w-4xl mx-auto bg-gray-800/50 border-gray-700 hover:bg-gray-700/50 transition-all duration-300">
+          <CardContent className="p-8">
+            <Quote className="w-12 h-12 text-blue-500 mb-6 mx-auto" />
+            <blockquote className="text-xl text-gray-300 text-center italic mb-6">
+              "Vi startet Seavion med et mål om å bygge bro mellom teknologi og praktiske løsninger for bedrifter. Vi tror at hver utfordring er en mulighet til å skape noe bedre."
+            </blockquote>
+            <p className="text-gray-400 text-center">
+              - Grunnleggerne av Seavion
+            </p>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );
