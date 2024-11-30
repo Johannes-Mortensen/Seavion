@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Services from "./pages/Services";
 import AIAnalytics from "./pages/AIAnalytics";
 import Automation from "./pages/Automation";
+import Strategy from "./pages/Strategy";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/services/ai-analytics" element={<AIAnalytics />} />
           <Route path="/services/automation" element={<Automation />} />
+          <Route path="/services/strategy" element={<Strategy />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

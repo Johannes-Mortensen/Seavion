@@ -12,7 +12,7 @@ const Services = () => {
     {
       icon: <Brain className="w-12 h-12 text-purple-500" />,
       title: "AI og Dataanalyse",
-      description: "Vi hjelper deg med å utnytte kraften i kunstig intelligens og avansert dataanalyse for å drive din virksomhet fremover. Få verdifull innsikt fra dine data og ta bedre beslutninger.",
+      description: "Gjør data om til innsikt som skaper verdi.",
       link: "/services/ai-analytics",
       features: [
         "Prediktiv analyse",
@@ -22,9 +22,9 @@ const Services = () => {
       ]
     },
     {
-      icon: <Cpu className="w-12 h-12 text-blue-500" />,
+      icon: <Cpu className="w-12 h-12 text-green-500" />,
       title: "Automatisering",
-      description: "Effektiviser dine prosesser med skreddersydde automatiseringsløsninger. Reduser manuelle oppgaver og frigjør tid til verdiskapende arbeid.",
+      description: "Strømlinjeform dine prosesser for økt effektivitet.",
       link: "/services/automation",
       features: [
         "Prosessautomatisering",
@@ -34,9 +34,9 @@ const Services = () => {
       ]
     },
     {
-      icon: <LineChart className="w-12 h-12 text-green-500" />,
-      title: "Rådgivning og Strategi",
-      description: "Få ekspertråd om hvordan du best kan implementere og utnytte teknologi i din virksomhet. Vi hjelper deg med å utvikle en solid digital strategi.",
+      icon: <LineChart className="w-12 h-12 text-blue-500" />,
+      title: "Rådgivning og strategi",
+      description: "Få ekspertråd om hvordan du best kan implementere og utnytte teknologi i din virksomhet.",
       link: "/services/strategy",
       features: [
         "Digital transformasjon",
