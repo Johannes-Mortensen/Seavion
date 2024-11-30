@@ -4,7 +4,6 @@ import { WhatWeDoSection } from "@/components/sections/WhatWeDoSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { AboutUsSection } from "@/components/sections/AboutUsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
-import { ResourcesSection } from "@/components/sections/ResourcesSection";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
@@ -128,7 +127,6 @@ const Index = () => {
       <ServicesSection />
       <AboutUsSection />
       <ContactSection />
-      <ResourcesSection />
       <Footer />
     </div>
   );
