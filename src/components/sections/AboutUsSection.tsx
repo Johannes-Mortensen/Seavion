@@ -5,22 +5,22 @@ export const AboutUsSection = () => {
   const stats = [
     {
       icon: <Users className="w-8 h-8 text-blue-500" />,
-      number: "50+",
+      number: "10+",
       label: "Dedikerte eksperter"
     },
     {
       icon: <Target className="w-8 h-8 text-green-500" />,
-      number: "95%",
+      number: "90%",
       label: "Kundetilfredshet"
     },
     {
       icon: <Award className="w-8 h-8 text-yellow-500" />,
-      number: "10+",
+      number: "3+",
       label: "Års erfaring"
     },
     {
       icon: <Globe className="w-8 h-8 text-purple-500" />,
-      number: "100+",
+      number: "20+",
       label: "Vellykkede prosjekter"
     }
   ];
