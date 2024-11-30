@@ -1,32 +1,21 @@
 import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
-import { DigitalOverlay } from "@/components/hero/DigitalOverlay";
-import { HeroContent } from "@/components/hero/HeroContent";
-import { WhySection } from "@/components/sections/WhySection";
-import { SolutionsSection } from "@/components/sections/SolutionsSection";
-import { AboutUsSection } from "@/components/sections/AboutUsSection";
-import { ContactSection } from "@/components/sections/ContactSection";
-import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { WhatWeDoSection } from "@/components/sections/WhatWeDoSection";
+import { ServicesSection } from "@/components/sections/ServicesSection";
+import { AboutUsSection } from "@/components/sections/AboutUsSection";
+import { CustomerStoriesSection } from "@/components/sections/CustomerStoriesSection";
+import { ContactSection } from "@/components/sections/ContactSection";
+import { ResourcesSection } from "@/components/sections/ResourcesSection";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 800);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 flex items-center justify-center">
-        <div className="w-24 h-24 border-t-2 border-blue-500 rounded-full animate-spin" />
-      </div>
-    );
-  }
+  const scrollToContact = () => {
+    const contactSection = document.querySelector('#contact-section');
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
@@ -42,23 +31,44 @@ const Index = () => {
           />
         </div>
         
-        <DigitalOverlay />
-        <HeroContent />
+        {/* Hero Content */}
+        <div className="relative z-10 h-full flex items-center px-4">
+          <div className="container mx-auto">
+            <div className="max-w-3xl">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+                Vi skaper verdi med data og kunstig intelligens.
+              </h1>
+              <h2 className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in">
+                Fra innsikt til handling – smartere løsninger for enhver bedrift.
+              </h2>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  size="lg"
+                  onClick={() => navigate("/services")}
+                  className="bg-blue-600 hover:bg-blue-700 text-white"
+                >
+                  Utforsk våre tjenester
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  onClick={scrollToContact}
+                  className="border-white text-white hover:bg-white/10"
+                >
+                  Kontakt oss i dag
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Other Sections */}
-      <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-        <div className="absolute inset-0 opacity-5 bg-gradient-to-r from-blue-500/10 to-purple-500/10" />
-        <WhySection />
-      </div>
-
-      <div className="relative bg-gradient-to-bl from-gray-900 via-gray-800 to-gray-900">
-        <div className="absolute inset-0 opacity-5 bg-gradient-to-r from-emerald-500/10 to-blue-500/10" />
-        <SolutionsSection />
-      </div>
-
+      <WhatWeDoSection />
+      <ServicesSection />
       <AboutUsSection />
+      <CustomerStoriesSection />
       <ContactSection />
+      <ResourcesSection />
       <Footer />
     </div>
   );
