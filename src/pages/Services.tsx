@@ -5,15 +5,15 @@ import { useNavigate } from "react-router-dom";
 import { Brain, Cpu, LineChart, ArrowRight } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
-const Services = () => {
+const Tjenester = () => {
   const navigate = useNavigate();
 
   const services = [
     {
       icon: <Brain className="w-12 h-12 text-purple-500" />,
-      title: "AI og Dataanalyse",
+      title: "AI og Analyse",
       description: "Gjør data om til innsikt som skaper verdi.",
-      link: "/services/ai-analytics",
+      link: "/tjenester/ai-analyse",
       features: [
         "Prediktiv analyse",
         "Maskinlæring",
@@ -25,7 +25,7 @@ const Services = () => {
       icon: <Cpu className="w-12 h-12 text-green-500" />,
       title: "Automatisering",
       description: "Strømlinjeform dine prosesser for økt effektivitet.",
-      link: "/services/automation",
+      link: "/tjenester/automatisering",
       features: [
         "Prosessautomatisering",
         "Arbeidsflytoptimalisering",
@@ -37,7 +37,7 @@ const Services = () => {
       icon: <LineChart className="w-12 h-12 text-blue-500" />,
       title: "Rådgivning og strategi",
       description: "Få ekspertråd om hvordan du best kan implementere og utnytte teknologi i din virksomhet.",
-      link: "/services/strategy",
+      link: "/tjenester/strategi",
       features: [
         "Digital transformasjon",
         "Teknologistrategi",
@@ -101,7 +101,10 @@ const Services = () => {
 
         <div className="text-center">
           <Button
-            onClick={() => navigate("/contact")}
+            onClick={() => {
+              const contactSection = document.querySelector('#contact-section');
+              contactSection?.scrollIntoView({ behavior: 'smooth' });
+            }}
             className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-6"
           >
             Kontakt oss for en uforpliktende prat
@@ -114,4 +117,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Tjenester;

@@ -8,18 +8,21 @@ export const ServicesSection = () => {
   const services = [
     {
       icon: <Brain className="w-12 h-12 text-blue-500" />,
-      title: "AI og Dataanalyse",
-      description: "Gjør data om til innsikt som skaper verdi."
+      title: "AI og Analyse",
+      description: "Gjør data om til innsikt som skaper verdi.",
+      path: "/tjenester/ai-analyse"
     },
     {
       icon: <Cpu className="w-12 h-12 text-green-500" />,
       title: "Automatisering",
-      description: "Strømlinjeform dine prosesser for økt effektivitet."
+      description: "Strømlinjeform dine prosesser for økt effektivitet.",
+      path: "/tjenester/automatisering"
     },
     {
       icon: <LineChart className="w-12 h-12 text-purple-500" />,
       title: "Rådgivning og strategi",
-      description: "Få eksperthjelp til å implementere og optimalisere teknologi."
+      description: "Få eksperthjelp til å implementere og optimalisere teknologi.",
+      path: "/tjenester/strategi"
     }
   ];
 
@@ -35,7 +38,7 @@ export const ServicesSection = () => {
             <Card 
               key={index}
               className="bg-gray-800/50 backdrop-blur border-gray-700 hover:bg-gray-700/50 transition-all hover:scale-105 duration-300 cursor-pointer"
-              onClick={() => navigate(`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`)}
+              onClick={() => navigate(service.path)}
             >
               <CardHeader>
                 <div className="flex justify-center mb-4">
