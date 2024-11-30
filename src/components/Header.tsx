@@ -60,7 +60,7 @@ export const Header = () => {
               Hva gjør vi
             </button>
             <button
-              onClick={() => navigate("/services")}
+              onClick={() => navigate("/tjenester")}
               className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
             >
               Tjenester
