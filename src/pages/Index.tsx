@@ -6,9 +6,20 @@ import { AboutUsSection } from "@/components/sections/AboutUsSection";
 import { CustomerStoriesSection } from "@/components/sections/CustomerStoriesSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { ResourcesSection } from "@/components/sections/ResourcesSection";
-import { HeroContent } from "@/components/hero/HeroContent";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const Index = () => {
+  const scrollToContact = () => {
+    const contactSection = document.querySelector('#contact-section');
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToWhy = () => {
+    const whySection = document.querySelector('#why-section');
+    whySection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
       <Header />
