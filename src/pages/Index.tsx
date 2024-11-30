@@ -3,13 +3,17 @@ import { Footer } from "@/components/Footer";
 import { WhatWeDoSection } from "@/components/sections/WhatWeDoSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { AboutUsSection } from "@/components/sections/AboutUsSection";
-import { CustomerStoriesSection } from "@/components/sections/CustomerStoriesSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { ResourcesSection } from "@/components/sections/ResourcesSection";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 const Index = () => {
+  const cubeRef = useRef<HTMLDivElement>(null);
+  const animationRef = useRef<number>();
+  const rotationRef = useRef({ x: 45, y: 45 });
+
   const scrollToContact = () => {
     const contactSection = document.querySelector('#contact-section');
     contactSection?.scrollIntoView({ behavior: 'smooth' });
@@ -19,6 +23,32 @@ const Index = () => {
     const whySection = document.querySelector('#why-section');
     whySection?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    let lastTime = performance.now();
+    const ROTATION_SPEED = 0.065;
+
+    const animate = (currentTime: number) => {
+      const deltaTime = currentTime - lastTime;
+      lastTime = currentTime;
+
+      if (cubeRef.current) {
+        rotationRef.current.x += ROTATION_SPEED * (deltaTime / 16);
+        rotationRef.current.y += ROTATION_SPEED * (deltaTime / 16);
+        
+        cubeRef.current.style.transform = `rotateX(${rotationRef.current.x}deg) rotateY(${rotationRef.current.y}deg)`;
+      }
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animationRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
@@ -31,6 +61,38 @@ const Index = () => {
             className="w-full h-full object-cover brightness-[0.3] scale-105 transform transition-transform duration-[2s] hover:scale-110"
           />
         </div>
+
+        {/* Background Cube */}
+        <div className="absolute inset-0 flex items-center justify-center translate-x-0 md:translate-x-32 overflow-visible pointer-events-none">
+          <div 
+            className="relative w-[200px] h-[200px] md:w-[500px] md:h-[500px]"
+            style={{ 
+              perspective: "1000px",
+              willChange: "transform",
+              transform: 'translateZ(0)',
+              transformOrigin: 'center center'
+            }}
+          >
+            <div
+              ref={cubeRef}
+              className="absolute w-full h-full"
+              style={{ 
+                transformStyle: 'preserve-3d',
+                transform: 'rotateX(45deg) rotateY(45deg)',
+                backfaceVisibility: 'visible'
+              }}
+            >
+              {/* Cube faces */}
+              <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" style={{ transform: `translateZ(${window.innerWidth >= 768 ? '250px' : '100px'})`, border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)', backfaceVisibility: 'visible' }} />
+              <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" style={{ transform: `translateZ(${window.innerWidth >= 768 ? '-250px' : '-100px'}) rotateY(180deg)`, border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)', backfaceVisibility: 'visible' }} />
+              <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" style={{ transform: `rotateY(90deg) translateZ(${window.innerWidth >= 768 ? '250px' : '100px'})`, border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)', backfaceVisibility: 'visible' }} />
+              <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" style={{ transform: `rotateY(-90deg) translateZ(${window.innerWidth >= 768 ? '250px' : '100px'})`, border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)', backfaceVisibility: 'visible' }} />
+              <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" style={{ transform: `rotateX(90deg) translateZ(${window.innerWidth >= 768 ? '250px' : '100px'})`, border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)', backfaceVisibility: 'visible' }} />
+              <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" style={{ transform: `rotateX(-90deg) translateZ(${window.innerWidth >= 768 ? '250px' : '100px'})`, border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)', backfaceVisibility: 'visible' }} />
+            </div>
+          </div>
+        </div>
+
         <div className="relative z-10 h-full flex items-center px-4">
           <div className="container mx-auto">
             <div className="max-w-3xl">
@@ -65,7 +127,6 @@ const Index = () => {
       <WhatWeDoSection />
       <ServicesSection />
       <AboutUsSection />
-      <CustomerStoriesSection />
       <ContactSection />
       <ResourcesSection />
       <Footer />
