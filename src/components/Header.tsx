@@ -69,13 +69,7 @@ export const Header = () => {
               onClick={() => scrollToSection("#about-section")}
               className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
             >
-              Om oss
-            </button>
-            <button
-              onClick={() => scrollToSection("#customer-stories")}
-              className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
-            >
-              Kundehistorier
+              Vår historie
             </button>
             <button
               onClick={() => scrollToSection("#contact-section")}
