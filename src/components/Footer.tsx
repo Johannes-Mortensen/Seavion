@@ -11,17 +11,17 @@ export const Footer = () => {
           <div>
             <h3 className="text-white text-xl font-semibold mb-4">Kontakt oss</h3>
             <div className="space-y-3">
-              <a href="mailto:kontakt@seavion.no" className="flex items-center hover:text-blue-500 transition-colors">
+              <a href="mailto:johannesflessen@hotmail.no" className="flex items-center hover:text-blue-500 transition-colors">
                 <Mail className="w-5 h-5 mr-2 text-blue-500" />
-                <span>kontakt@seavion.no</span>
+                <span>johannesflessen@hotmail.no</span>
               </a>
-              <a href="tel:+4712345678" className="flex items-center hover:text-blue-500 transition-colors">
+              <a href="tel:+47400599901" className="flex items-center hover:text-blue-500 transition-colors">
                 <Phone className="w-5 h-5 mr-2 text-blue-500" />
-                <span>+47 123 45 678</span>
+                <span>+47 400 59 901</span>
               </a>
               <div className="flex items-center">
                 <MapPin className="w-5 h-5 mr-2 text-blue-500" />
-                <span>Karl Johans gate 1, Oslo</span>
+                <span>Trondheim</span>
               </div>
             </div>
           </div>
