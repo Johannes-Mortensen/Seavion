@@ -46,6 +46,8 @@
   perspective: 1000px;
   width: 200px;
   height: 200px;
+  position: relative;
+  z-index: 50;
 }
 
 .cube {
@@ -74,9 +76,9 @@
 
 @keyframes cube-spin {
   from {
-    transform: rotateX(-20deg) rotateY(0deg);
+    transform: rotateX(-20deg) rotateY(0deg) translateZ(50px);
   }
   to {
-    transform: rotateX(-20deg) rotateY(360deg);
+    transform: rotateX(-20deg) rotateY(360deg) translateZ(50px);
   }
 }
