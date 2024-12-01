@@ -24,22 +24,16 @@ export const Header = () => {
   }, [location.pathname]);
 
   const scrollToSection = (sectionId: string) => {
-    // First, ensure we're on the home page
-    if (location.pathname !== "/") {
-      navigate("/");
-      // Wait for navigation to complete before scrolling
-      setTimeout(() => {
-        const section = document.getElementById(sectionId.replace('#', ''));
-        if (section) {
-          section.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100);
-    } else {
-      // If already on home page, scroll directly
-      const section = document.getElementById(sectionId.replace('#', ''));
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const headerOffset = 100; // Account for fixed header
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
     }
   };
 
