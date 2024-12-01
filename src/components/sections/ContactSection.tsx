@@ -1,8 +1,6 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Image } from "lucide-react";
 
 export const ContactSection = () => {
   return (
@@ -61,18 +59,13 @@ export const ContactSection = () => {
             {/* Contact Person */}
             <div className="flex flex-col items-center justify-center space-y-6 bg-gray-800/30 rounded-lg p-8">
               <div className="text-center">
-                <Avatar className="w-32 h-32 mx-auto mb-6">
-                  <AvatarImage src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="Johannes Mortensen Flessen" />
-                  <AvatarFallback>JMF</AvatarFallback>
-                </Avatar>
-                <h3 className="text-2xl font-semibold text-white mb-2 flex items-center justify-center gap-2">
+                <h3 className="text-2xl font-semibold text-white mb-2">
                   Johannes Mortensen Flessen
-                  <Image className="w-6 h-6 text-blue-500" />
                 </h3>
                 <div className="flex flex-col items-center space-y-2">
                   <p className="text-gray-300">Daglig leder</p>
-                  <p className="text-gray-300">johannes@seavion.no</p>
-                  <p className="text-gray-300">+47 922 90 601</p>
+                  <p className="text-gray-300">johannesflessen@hotmail.no</p>
+                  <p className="text-gray-300">+47 400 59 901</p>
                 </div>
               </div>
             </div>
