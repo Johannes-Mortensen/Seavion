@@ -14,14 +14,17 @@ export const DigitalOverlay = () => {
         />
         
         {/* Animated light beam */}
-        <div className="absolute inset-0 opacity-30"
+        <div 
+          className="absolute inset-0 overflow-hidden"
           style={{
-            background: 'linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.1), transparent)'
+            background: 'linear-gradient(45deg, transparent 20%, rgba(59, 130, 246, 0.1) 25%, transparent 30%)',
+            animation: 'slide 8s linear infinite'
           }}
         />
 
-        {/* Additional ambient light effect */}
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-500/5 blur-3xl rounded-full" />
+        {/* Additional ambient light effects */}
+        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-500/5 blur-3xl rounded-full animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-blue-500/5 blur-3xl rounded-full animate-float" />
       </div>
     </div>
   );

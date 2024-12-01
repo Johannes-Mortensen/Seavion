@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { DigitalOverlay } from "./DigitalOverlay";
 
 export const HeroContent = () => {
   const scrollToContact = () => {
@@ -23,6 +24,8 @@ export const HeroContent = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/50 to-gray-900" />
       </div>
+
+      <DigitalOverlay />
 
       {/* Left side content */}
       <div className="w-full lg:w-3/5 space-y-8 text-left px-4 lg:pl-24 mt-32 md:mt-48">
