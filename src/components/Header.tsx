@@ -24,16 +24,19 @@ export const Header = () => {
   }, [location.pathname]);
 
   const scrollToSection = (sectionId: string) => {
-    if (window.location.pathname !== "/") {
+    // First, ensure we're on the home page
+    if (location.pathname !== "/") {
       navigate("/");
+      // Wait for navigation to complete before scrolling
       setTimeout(() => {
-        const section = document.querySelector(sectionId);
+        const section = document.getElementById(sectionId.replace('#', ''));
         if (section) {
           section.scrollIntoView({ behavior: "smooth" });
         }
       }, 100);
     } else {
-      const section = document.querySelector(sectionId);
+      // If already on home page, scroll directly
+      const section = document.getElementById(sectionId.replace('#', ''));
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
       }
@@ -43,25 +46,25 @@ export const Header = () => {
   const NavLinks = () => (
     <>
       <button
-        onClick={() => scrollToSection("#what-we-do-section")}
+        onClick={() => scrollToSection("what-we-do-section")}
         className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
       >
         Hva gjør vi
       </button>
       <button
-        onClick={() => scrollToSection("#services-section")}
+        onClick={() => scrollToSection("services-section")}
         className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
       >
         Tjenester
       </button>
       <button
-        onClick={() => scrollToSection("#about-section")}
+        onClick={() => scrollToSection("about-section")}
         className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
       >
         Vår historie
       </button>
       <button
-        onClick={() => scrollToSection("#contact-section")}
+        onClick={() => scrollToSection("contact-section")}
         className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
       >
         Kontakt oss
