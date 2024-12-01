@@ -58,13 +58,37 @@ export const HeroContent = () => {
 
       {/* 3D Cube */}
       <div className="hidden lg:block absolute right-16 top-1/2 -translate-y-1/2">
-        <div className="cube-container">
-          <div className="cube-face" style={{ transform: 'translateZ(200px)' }}>Front</div>
-          <div className="cube-face" style={{ transform: 'translateZ(-200px) rotateY(180deg)' }}>Back</div>
-          <div className="cube-face" style={{ transform: 'translateX(200px) rotateY(90deg)' }}>Right</div>
-          <div className="cube-face" style={{ transform: 'translateX(-200px) rotateY(-90deg)' }}>Left</div>
-          <div className="cube-face" style={{ transform: 'translateY(-200px) rotateX(90deg)' }}>Top</div>
-          <div className="cube-face" style={{ transform: 'translateY(200px) rotateX(-90deg)' }}>Bottom</div>
+        <div className="w-[400px] h-[400px] relative preserve-3d animate-spin">
+          {/* Front face */}
+          <div className="absolute w-full h-full bg-blue-500/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transform-gpu"
+               style={{ transform: 'translateZ(200px)' }}>
+            Front
+          </div>
+          {/* Back face */}
+          <div className="absolute w-full h-full bg-blue-500/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transform-gpu"
+               style={{ transform: 'translateZ(-200px) rotateY(180deg)' }}>
+            Back
+          </div>
+          {/* Right face */}
+          <div className="absolute w-full h-full bg-blue-500/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transform-gpu"
+               style={{ transform: 'translateX(200px) rotateY(90deg)' }}>
+            Right
+          </div>
+          {/* Left face */}
+          <div className="absolute w-full h-full bg-blue-500/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transform-gpu"
+               style={{ transform: 'translateX(-200px) rotateY(-90deg)' }}>
+            Left
+          </div>
+          {/* Top face */}
+          <div className="absolute w-full h-full bg-blue-500/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transform-gpu"
+               style={{ transform: 'translateY(-200px) rotateX(90deg)' }}>
+            Top
+          </div>
+          {/* Bottom face */}
+          <div className="absolute w-full h-full bg-blue-500/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transform-gpu"
+               style={{ transform: 'translateY(200px) rotateX(-90deg)' }}>
+            Bottom
+          </div>
         </div>
       </div>
     </div>
