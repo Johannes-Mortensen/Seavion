@@ -58,36 +58,30 @@ export const HeroContent = () => {
 
       {/* 3D Cube */}
       <div className="lg:block absolute right-16 top-1/2 -translate-y-1/2">
-        <div className="w-[400px] h-[400px] relative preserve-3d animate-spin">
+        <div className="w-[400px] h-[400px] relative preserve-3d">
           {/* Front face */}
-          <div className="absolute w-full h-full bg-blue-500/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transform-gpu"
-               style={{ transform: 'translateZ(200px)' }}>
-            Front
+          <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/30 to-purple-500/30 backdrop-blur-sm border border-white/20 rounded-lg flex items-center justify-center text-white transform-gpu translate-z-[200px]">
+            <div className="text-4xl font-bold">AI</div>
           </div>
           {/* Back face */}
-          <div className="absolute w-full h-full bg-blue-500/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transform-gpu"
-               style={{ transform: 'translateZ(-200px) rotateY(180deg)' }}>
-            Back
+          <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/30 to-purple-500/30 backdrop-blur-sm border border-white/20 rounded-lg flex items-center justify-center text-white transform-gpu -translate-z-[200px] rotate-y-180">
+            <div className="text-4xl font-bold">ML</div>
           </div>
           {/* Right face */}
-          <div className="absolute w-full h-full bg-blue-500/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transform-gpu"
-               style={{ transform: 'translateX(200px) rotateY(90deg)' }}>
-            Right
+          <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/30 to-purple-500/30 backdrop-blur-sm border border-white/20 rounded-lg flex items-center justify-center text-white transform-gpu translate-x-[200px] rotate-y-90">
+            <div className="text-4xl font-bold">Data</div>
           </div>
           {/* Left face */}
-          <div className="absolute w-full h-full bg-blue-500/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transform-gpu"
-               style={{ transform: 'translateX(-200px) rotateY(-90deg)' }}>
-            Left
+          <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/30 to-purple-500/30 backdrop-blur-sm border border-white/20 rounded-lg flex items-center justify-center text-white transform-gpu -translate-x-[200px] -rotate-y-90">
+            <div className="text-4xl font-bold">Cloud</div>
           </div>
           {/* Top face */}
-          <div className="absolute w-full h-full bg-blue-500/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transform-gpu"
-               style={{ transform: 'translateY(-200px) rotateX(90deg)' }}>
-            Top
+          <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/30 to-purple-500/30 backdrop-blur-sm border border-white/20 rounded-lg flex items-center justify-center text-white transform-gpu -translate-y-[200px] rotate-x-90">
+            <div className="text-4xl font-bold">Tech</div>
           </div>
           {/* Bottom face */}
-          <div className="absolute w-full h-full bg-blue-500/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transform-gpu"
-               style={{ transform: 'translateY(200px) rotateX(-90deg)' }}>
-            Bottom
+          <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/30 to-purple-500/30 backdrop-blur-sm border border-white/20 rounded-lg flex items-center justify-center text-white transform-gpu translate-y-[200px] -rotate-x-90">
+            <div className="text-4xl font-bold">Future</div>
           </div>
         </div>
       </div>

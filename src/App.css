@@ -43,15 +43,15 @@
 
 .preserve-3d {
   transform-style: preserve-3d;
-  perspective: 1000px;
-  transform: rotateX(20deg) rotateY(20deg);
+  perspective: 2000px;
+  animation: spin 20s linear infinite;
 }
 
 @keyframes spin {
   from {
-    transform: rotateX(0) rotateY(0);
+    transform: rotateX(30deg) rotateY(0);
   }
   to {
-    transform: rotateX(360deg) rotateY(360deg);
+    transform: rotateX(30deg) rotateY(360deg);
   }
 }
