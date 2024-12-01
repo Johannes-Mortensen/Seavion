@@ -56,7 +56,7 @@ export const ServicesSection = () => {
           {services.map((service, index) => (
             <Card 
               key={index}
-              className="bg-gray-800/50 backdrop-blur border-gray-700 hover:bg-gray-700/50 transition-all duration-300"
+              className="bg-gray-800/50 backdrop-blur border-gray-700 hover:bg-gray-700/50 transition-all duration-300 flex flex-col"
             >
               <CardHeader>
                 <div className="flex justify-center mb-4">
@@ -69,13 +69,15 @@ export const ServicesSection = () => {
                   {service.description}
                 </p>
               </CardHeader>
-              <CardContent className="space-y-3">
-                {service.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-center text-gray-300">
-                    <ArrowRight className="w-4 h-4 mr-2 text-purple-500" />
-                    <span>{feature}</span>
-                  </div>
-                ))}
+              <CardContent className="flex-1 flex flex-col">
+                <div className="space-y-3 flex-1">
+                  {service.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center text-gray-300">
+                      <ArrowRight className="w-4 h-4 mr-2 text-purple-500" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
                 <button
                   onClick={() => navigate(service.path)}
                   className="w-full mt-6 bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-md transition-colors duration-300"
