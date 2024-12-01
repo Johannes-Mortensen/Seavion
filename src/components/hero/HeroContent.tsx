@@ -58,30 +58,14 @@ export const HeroContent = () => {
 
       {/* 3D Cube */}
       <div className="lg:block absolute right-16 top-1/2 -translate-y-1/2">
-        <div className="w-[400px] h-[400px] relative preserve-3d">
-          {/* Front face */}
-          <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/30 to-purple-500/30 backdrop-blur-sm border border-white/20 rounded-lg flex items-center justify-center text-white transform-gpu translate-z-[200px]">
-            <div className="text-4xl font-bold">AI</div>
-          </div>
-          {/* Back face */}
-          <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/30 to-purple-500/30 backdrop-blur-sm border border-white/20 rounded-lg flex items-center justify-center text-white transform-gpu -translate-z-[200px] rotate-y-180">
-            <div className="text-4xl font-bold">ML</div>
-          </div>
-          {/* Right face */}
-          <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/30 to-purple-500/30 backdrop-blur-sm border border-white/20 rounded-lg flex items-center justify-center text-white transform-gpu translate-x-[200px] rotate-y-90">
-            <div className="text-4xl font-bold">Data</div>
-          </div>
-          {/* Left face */}
-          <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/30 to-purple-500/30 backdrop-blur-sm border border-white/20 rounded-lg flex items-center justify-center text-white transform-gpu -translate-x-[200px] -rotate-y-90">
-            <div className="text-4xl font-bold">Cloud</div>
-          </div>
-          {/* Top face */}
-          <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/30 to-purple-500/30 backdrop-blur-sm border border-white/20 rounded-lg flex items-center justify-center text-white transform-gpu -translate-y-[200px] rotate-x-90">
-            <div className="text-4xl font-bold">Tech</div>
-          </div>
-          {/* Bottom face */}
-          <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/30 to-purple-500/30 backdrop-blur-sm border border-white/20 rounded-lg flex items-center justify-center text-white transform-gpu translate-y-[200px] -rotate-x-90">
-            <div className="text-4xl font-bold">Future</div>
+        <div className="preserve-3d">
+          <div className="cube">
+            <div className="cube-face front"></div>
+            <div className="cube-face back"></div>
+            <div className="cube-face right"></div>
+            <div className="cube-face left"></div>
+            <div className="cube-face top"></div>
+            <div className="cube-face bottom"></div>
           </div>
         </div>
       </div>
