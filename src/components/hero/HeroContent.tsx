@@ -56,7 +56,7 @@ export const HeroContent = () => {
       </div>
 
       {/* Desktop Only Cube Container */}
-      <div className="absolute inset-0 hidden lg:flex items-center justify-center translate-x-0 lg:translate-x-32">
+      <div className="absolute inset-0 hidden 2xl:flex items-center justify-center translate-x-0 2xl:translate-x-32">
         <div className="relative w-[400px] h-[400px]" style={{ perspective: "1000px" }}>
           <div
             ref={cubeRef}
