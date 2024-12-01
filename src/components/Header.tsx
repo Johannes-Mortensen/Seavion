@@ -24,41 +24,61 @@ export const Header = () => {
   }, [location.pathname]);
 
   const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      const headerOffset = 100; // Account for fixed header
-      const elementPosition = section.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    // First, ensure we're on the home page
+    if (location.pathname !== "/") {
+      navigate("/");
+      // Wait for navigation to complete before scrolling
+      setTimeout(() => {
+        const section = document.querySelector(sectionId);
+        if (section) {
+          const headerOffset = 100;
+          const elementPosition = section.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+        }
+      }, 100);
+    } else {
+      // If already on home page, scroll directly
+      const section = document.querySelector(sectionId);
+      if (section) {
+        const headerOffset = 100;
+        const elementPosition = section.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
     }
   };
 
   const NavLinks = () => (
     <>
       <button
-        onClick={() => scrollToSection("what-we-do-section")}
+        onClick={() => scrollToSection("#what-we-do-section")}
         className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
       >
         Hva gjør vi
       </button>
       <button
-        onClick={() => scrollToSection("services-section")}
+        onClick={() => scrollToSection("#services-section")}
         className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
       >
         Tjenester
       </button>
       <button
-        onClick={() => scrollToSection("about-section")}
+        onClick={() => scrollToSection("#about-section")}
         className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
       >
         Vår historie
       </button>
       <button
-        onClick={() => scrollToSection("contact-section")}
+        onClick={() => scrollToSection("#contact-section")}
         className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
       >
         Kontakt oss
