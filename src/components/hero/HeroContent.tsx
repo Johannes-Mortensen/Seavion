@@ -1,12 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useEffect, useRef } from "react";
 
 export const HeroContent = () => {
-  const cubeRef = useRef<HTMLDivElement>(null);
-  const animationRef = useRef<number>();
-  const rotationRef = useRef({ x: 45, y: 45 });
-
   const scrollToContact = () => {
     const contactSection = document.querySelector('#contact-section');
     contactSection?.scrollIntoView({ behavior: 'smooth' });
@@ -16,32 +11,6 @@ export const HeroContent = () => {
     const whySection = document.querySelector('#why-section');
     whySection?.scrollIntoView({ behavior: 'smooth' });
   };
-
-  useEffect(() => {
-    let lastTime = performance.now();
-    const ROTATION_SPEED = 0.065;
-
-    const animate = (currentTime: number) => {
-      const deltaTime = currentTime - lastTime;
-      lastTime = currentTime;
-
-      if (cubeRef.current) {
-        rotationRef.current.x += ROTATION_SPEED * (deltaTime / 16);
-        rotationRef.current.y += ROTATION_SPEED * (deltaTime / 16);
-        
-        cubeRef.current.style.transform = `rotateX(${rotationRef.current.x}deg) rotateY(${rotationRef.current.y}deg)`;
-      }
-      animationRef.current = requestAnimationFrame(animate);
-    };
-
-    animationRef.current = requestAnimationFrame(animate);
-
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-    };
-  }, []);
 
   return (
     <div className="relative z-10 min-h-screen flex items-center px-4">
@@ -53,39 +22,6 @@ export const HeroContent = () => {
           className="w-full h-full object-cover brightness-[0.3] scale-105 transform transition-transform duration-[2s] hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/50 to-gray-900" />
-      </div>
-
-      {/* Desktop Only Cube Container */}
-      <div className="absolute inset-0 hidden 2xl:flex items-center justify-center translate-x-0 2xl:translate-x-32">
-        <div className="relative w-[400px] h-[400px]" style={{ perspective: "1000px" }}>
-          <div
-            ref={cubeRef}
-            className="absolute w-full h-full"
-            style={{ 
-              transformStyle: 'preserve-3d',
-              transform: 'rotateX(45deg) rotateY(45deg)',
-            }}
-          >
-            {/* Front face */}
-            <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" 
-                 style={{ transform: 'translateZ(200px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)' }} />
-            {/* Back face */}
-            <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" 
-                 style={{ transform: 'translateZ(-200px) rotateY(180deg)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)' }} />
-            {/* Right face */}
-            <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" 
-                 style={{ transform: 'rotateY(90deg) translateZ(200px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)' }} />
-            {/* Left face */}
-            <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" 
-                 style={{ transform: 'rotateY(-90deg) translateZ(200px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)' }} />
-            {/* Top face */}
-            <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" 
-                 style={{ transform: 'rotateX(90deg) translateZ(200px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)' }} />
-            {/* Bottom face */}
-            <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" 
-                 style={{ transform: 'rotateX(-90deg) translateZ(200px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)' }} />
-          </div>
-        </div>
       </div>
 
       {/* Left side content */}
