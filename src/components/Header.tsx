@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { useNavigate } from "react-router-dom";
-import { Menu, X } from "lucide-react";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -18,7 +16,6 @@ export const Header = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    setIsMenuOpen(false);
     if (window.location.pathname !== "/") {
       navigate("/");
       setTimeout(() => {
@@ -51,20 +48,11 @@ export const Header = () => {
             <img 
               src="/logo.svg" 
               alt="Seavion Logo" 
-              className="h-24 w-auto md:h-32 transition-all duration-300"
+              className="h-40 w-auto md:h-48 transition-all duration-300"
             />
           </button>
 
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden text-white p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-
-          {/* Desktop navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("#what-we-do")}
               className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
@@ -91,38 +79,6 @@ export const Header = () => {
             </button>
           </nav>
         </div>
-
-        {/* Mobile navigation */}
-        {isMenuOpen && (
-          <nav className="md:hidden bg-gray-900/95 backdrop-blur-sm py-4">
-            <div className="flex flex-col space-y-4">
-              <button
-                onClick={() => scrollToSection("#what-we-do")}
-                className="text-sm text-white hover:text-blue-300 transition-colors py-2"
-              >
-                Hva gjør vi
-              </button>
-              <button
-                onClick={() => navigate("/tjenester")}
-                className="text-sm text-white hover:text-blue-300 transition-colors py-2"
-              >
-                Tjenester
-              </button>
-              <button
-                onClick={() => scrollToSection("#about-section")}
-                className="text-sm text-white hover:text-blue-300 transition-colors py-2"
-              >
-                Vår historie
-              </button>
-              <button
-                onClick={() => scrollToSection("#contact-section")}
-                className="text-sm text-white hover:text-blue-300 transition-colors py-2"
-              >
-                Kontakt oss
-              </button>
-            </div>
-          </nav>
-        )}
       </div>
     </header>
   );
