@@ -57,16 +57,14 @@ export const HeroContent = () => {
       </div>
 
       {/* 3D Cube */}
-      <div className="absolute right-16 top-1/2 -translate-y-1/2 z-50">
-        <div className="cube-container">
-          <div className="cube">
-            <div className="cube-face front"></div>
-            <div className="cube-face back"></div>
-            <div className="cube-face right"></div>
-            <div className="cube-face left"></div>
-            <div className="cube-face top"></div>
-            <div className="cube-face bottom"></div>
-          </div>
+      <div className="cube-container">
+        <div className="cube">
+          <div className="cube-face front"></div>
+          <div className="cube-face back"></div>
+          <div className="cube-face right"></div>
+          <div className="cube-face left"></div>
+          <div className="cube-face top"></div>
+          <div className="cube-face bottom"></div>
         </div>
       </div>
     </div>

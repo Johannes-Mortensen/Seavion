@@ -45,7 +45,7 @@
   perspective: 1000px;
   width: 200px;
   height: 200px;
-  position: relative;
+  margin: 100px auto;
   transform-style: preserve-3d;
 }
 
@@ -61,8 +61,8 @@
   position: absolute;
   width: 200px;
   height: 200px;
-  background: rgba(59, 130, 246, 0.5);
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: rgba(59, 130, 246, 0.8);
+  border: 4px solid rgba(255, 255, 255, 0.9);
 }
 
 .front  { transform: rotateY(0deg) translateZ(100px); }
