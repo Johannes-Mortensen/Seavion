@@ -43,7 +43,7 @@ export const Header = () => {
   const NavLinks = () => (
     <>
       <button
-        onClick={() => scrollToSection("#what-we-do")}
+        onClick={() => scrollToSection("#what-we-do-section")}
         className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
       >
         Hva gjør vi
