@@ -55,8 +55,8 @@ export const HeroContent = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/50 to-gray-900" />
       </div>
 
-      {/* Cube Container - Hidden on mobile */}
-      <div className="absolute inset-0 hidden md:flex items-center justify-center translate-x-0 md:translate-x-32">
+      {/* Desktop Only Cube Container */}
+      <div className="absolute inset-0 hidden lg:flex items-center justify-center translate-x-0 lg:translate-x-32">
         <div className="relative w-[400px] h-[400px]" style={{ perspective: "1000px" }}>
           <div
             ref={cubeRef}
