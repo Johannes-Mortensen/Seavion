@@ -20,7 +20,8 @@ export const HeroContent = () => {
         style={{ 
           backgroundImage: 'url(/ocean-bg.jpg)',
           backgroundPosition: 'center',
-          backgroundSize: 'cover'
+          backgroundSize: 'cover',
+          opacity: 1
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 to-gray-900/80 z-0" />
