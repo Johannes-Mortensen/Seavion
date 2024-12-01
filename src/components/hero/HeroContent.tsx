@@ -57,7 +57,7 @@ export const HeroContent = () => {
 
       {/* Cube Container */}
       <div className="absolute inset-0 flex items-center justify-center translate-x-0 md:translate-x-32">
-        <div className="relative w-[200px] h-[200px] md:w-[400px] md:h-[400px]" style={{ perspective: "1000px" }}>
+        <div className="relative w-[150px] h-[150px] md:w-[400px] md:h-[400px]" style={{ perspective: "800px" }}>
           <div
             ref={cubeRef}
             className="absolute w-full h-full"
@@ -68,22 +68,22 @@ export const HeroContent = () => {
           >
             {/* Front face */}
             <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" 
-                 style={{ transform: 'translateZ(100px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)' }} />
+                 style={{ transform: 'translateZ(75px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)' }} />
             {/* Back face */}
             <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" 
-                 style={{ transform: 'translateZ(-100px) rotateY(180deg)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)' }} />
+                 style={{ transform: 'translateZ(-75px) rotateY(180deg)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)' }} />
             {/* Right face */}
             <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" 
-                 style={{ transform: 'rotateY(90deg) translateZ(100px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)' }} />
+                 style={{ transform: 'rotateY(90deg) translateZ(75px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)' }} />
             {/* Left face */}
             <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" 
-                 style={{ transform: 'rotateY(-90deg) translateZ(100px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)' }} />
+                 style={{ transform: 'rotateY(-90deg) translateZ(75px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)' }} />
             {/* Top face */}
             <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" 
-                 style={{ transform: 'rotateX(90deg) translateZ(100px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)' }} />
+                 style={{ transform: 'rotateX(90deg) translateZ(75px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)' }} />
             {/* Bottom face */}
             <div className="absolute w-full h-full bg-gradient-to-br from-blue-500/10 to-transparent" 
-                 style={{ transform: 'rotateX(-90deg) translateZ(100px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)' }} />
+                 style={{ transform: 'rotateX(-90deg) translateZ(75px)', border: '1px solid rgba(34, 211, 238, 0.3)', boxShadow: '0 0 15px rgba(34, 211, 238, 0.2)' }} />
           </div>
         </div>
       </div>
