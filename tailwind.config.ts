@@ -95,6 +95,7 @@ export default {
         "pulse": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "slide": "slide 8s linear infinite",
         "float": "float 6s ease-in-out infinite",
+        "spin": "spin 20s linear infinite",
       },
     },
   },
