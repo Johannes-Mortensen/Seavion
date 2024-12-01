@@ -58,7 +58,7 @@ export const HeroContent = () => {
 
       {/* 3D Cube */}
       <div className="hidden lg:block absolute right-16 top-1/2 -translate-y-1/2">
-        <div className="w-[400px] h-[400px] relative preserve-3d animate-spin">
+        <div className="w-[400px] h-[400px] relative preserve-3d">
           {/* Front face */}
           <div className="absolute w-full h-full bg-blue-500/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white"
                style={{ transform: 'translateZ(200px)' }}>
