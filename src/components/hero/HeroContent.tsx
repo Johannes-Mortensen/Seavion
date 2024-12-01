@@ -57,7 +57,7 @@ export const HeroContent = () => {
       </div>
 
       {/* 3D Cube */}
-      <div className="lg:block absolute right-16 top-1/2 -translate-y-1/2">
+      <div className="block absolute right-16 top-1/2 -translate-y-1/2">
         <div className="preserve-3d">
           <div className="cube">
             <div className="cube-face front"></div>
