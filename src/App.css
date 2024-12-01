@@ -41,15 +41,7 @@
   color: #888;
 }
 
-@keyframes spin {
-  from {
-    transform: rotateX(0) rotateY(0);
-  }
-  to {
-    transform: rotateX(360deg) rotateY(360deg);
-  }
-}
-
 .preserve-3d {
   transform-style: preserve-3d;
+  perspective: 1000px;
 }
