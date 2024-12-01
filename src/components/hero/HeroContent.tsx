@@ -25,7 +25,7 @@ export const HeroContent = () => {
       </div>
 
       {/* Left side content */}
-      <div className="w-full lg:w-3/5 space-y-8 text-left px-4 lg:pl-24 mt-16 md:mt-0">
+      <div className="w-full lg:w-3/5 space-y-8 text-left px-4 lg:pl-24 mt-32 md:mt-48">
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-tight animate-fade-in opacity-0 text-white" 
             style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
           Vi skaper verdi med data og kunstig intelligens.
