@@ -41,7 +41,7 @@
   color: #888;
 }
 
-.preserve-3d {
+.cube-container {
   transform-style: preserve-3d;
   perspective: 1000px;
   width: 200px;
