@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +17,11 @@ export const Header = () => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    // Scroll to top when route changes
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   const scrollToSection = (sectionId: string) => {
     if (window.location.pathname !== "/") {
@@ -34,6 +40,11 @@ export const Header = () => {
     }
   };
 
+  const handleNavigate = (path: string) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
+
   const NavLinks = () => (
     <>
       <button
@@ -43,7 +54,7 @@ export const Header = () => {
         Hva gjør vi
       </button>
       <button
-        onClick={() => navigate("/tjenester")}
+        onClick={() => handleNavigate("/tjenester")}
         className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
       >
         Tjenester
@@ -79,7 +90,7 @@ export const Header = () => {
             <img 
               src="/logo.svg" 
               alt="Seavion Logo" 
-              className="h-12 w-auto md:h-16 transition-all duration-300"
+              className="h-16 w-auto md:h-20 transition-all duration-300"
             />
           </button>
 
