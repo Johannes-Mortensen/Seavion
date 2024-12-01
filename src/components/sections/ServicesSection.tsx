@@ -59,7 +59,7 @@ export const ServicesSection = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-8 hover:bg-gray-700/50 transition-all"
+              className="bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-8 hover:bg-gray-700/50 transition-all flex flex-col"
             >
               <div className="flex justify-center mb-6">
                 {service.icon}
@@ -70,7 +70,7 @@ export const ServicesSection = () => {
               <p className="text-gray-300 text-center mb-6">
                 {service.description}
               </p>
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-8 flex-grow">
                 {service.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center text-gray-300">
                     <span className="text-purple-500 mr-2">→</span>
