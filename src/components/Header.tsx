@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { useNavigate } from "react-router-dom";
+import { Menu } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,6 +34,35 @@ export const Header = () => {
     }
   };
 
+  const NavLinks = () => (
+    <>
+      <button
+        onClick={() => scrollToSection("#what-we-do")}
+        className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
+      >
+        Hva gjør vi
+      </button>
+      <button
+        onClick={() => navigate("/tjenester")}
+        className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
+      >
+        Tjenester
+      </button>
+      <button
+        onClick={() => scrollToSection("#about-section")}
+        className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
+      >
+        Vår historie
+      </button>
+      <button
+        onClick={() => scrollToSection("#contact-section")}
+        className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
+      >
+        Kontakt oss
+      </button>
+    </>
+  );
+
   return (
     <header 
       className={cn(
@@ -48,36 +79,26 @@ export const Header = () => {
             <img 
               src="/logo.svg" 
               alt="Seavion Logo" 
-              className="h-40 w-auto md:h-48 transition-all duration-300"
+              className="h-12 w-auto md:h-16 transition-all duration-300"
             />
           </button>
 
-          <nav className="flex items-center space-x-8">
-            <button
-              onClick={() => scrollToSection("#what-we-do")}
-              className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
-            >
-              Hva gjør vi
-            </button>
-            <button
-              onClick={() => navigate("/tjenester")}
-              className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
-            >
-              Tjenester
-            </button>
-            <button
-              onClick={() => scrollToSection("#about-section")}
-              className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
-            >
-              Vår historie
-            </button>
-            <button
-              onClick={() => scrollToSection("#contact-section")}
-              className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
-            >
-              Kontakt oss
-            </button>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            <NavLinks />
           </nav>
+
+          {/* Mobile Navigation */}
+          <Sheet>
+            <SheetTrigger className="md:hidden">
+              <Menu className="h-6 w-6 text-white" />
+            </SheetTrigger>
+            <SheetContent side="right" className="bg-gray-900/95 backdrop-blur-sm w-[300px] p-6">
+              <nav className="flex flex-col space-y-6 mt-8">
+                <NavLinks />
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
