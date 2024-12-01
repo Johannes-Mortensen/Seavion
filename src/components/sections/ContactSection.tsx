@@ -81,8 +81,8 @@ export const ContactSection = () => {
           <div className="flex flex-col items-center justify-center space-y-6 bg-gray-800/30 rounded-lg p-8">
             <div className="text-center">
               <Avatar className="w-32 h-32 mx-auto mb-6">
-                <AvatarImage src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" alt="Contact Person" />
-                <AvatarFallback>CP</AvatarFallback>
+                <AvatarImage src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="Johannes Mortensen Flessen" />
+                <AvatarFallback>JMF</AvatarFallback>
               </Avatar>
               <h3 className="text-2xl font-semibold text-white mb-2">Johannes Mortensen Flessen</h3>
               <div className="flex flex-col items-center space-y-2">
