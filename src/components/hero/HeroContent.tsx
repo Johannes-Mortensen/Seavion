@@ -55,18 +55,6 @@ export const HeroContent = () => {
           </Button>
         </div>
       </div>
-
-      {/* 3D Cube */}
-      <div className="cube-container">
-        <div className="cube">
-          <div className="cube-face front"></div>
-          <div className="cube-face back"></div>
-          <div className="cube-face right"></div>
-          <div className="cube-face left"></div>
-          <div className="cube-face top"></div>
-          <div className="cube-face bottom"></div>
-        </div>
-      </div>
     </div>
   );
 };
