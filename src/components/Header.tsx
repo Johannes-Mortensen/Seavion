@@ -40,11 +40,6 @@ export const Header = () => {
     }
   };
 
-  const handleNavigate = (path: string) => {
-    navigate(path);
-    window.scrollTo(0, 0);
-  };
-
   const NavLinks = () => (
     <>
       <button
@@ -54,7 +49,7 @@ export const Header = () => {
         Hva gjør vi
       </button>
       <button
-        onClick={() => handleNavigate("/tjenester")}
+        onClick={() => scrollToSection("#services-section")}
         className="text-sm text-white hover:text-blue-300 transition-colors whitespace-nowrap"
       >
         Tjenester
