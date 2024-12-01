@@ -43,7 +43,7 @@ export const Header = () => {
       )}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           <button 
             onClick={() => navigate("/")}
             className="flex items-center"
@@ -51,7 +51,7 @@ export const Header = () => {
             <img 
               src="/logo.svg" 
               alt="Seavion Logo" 
-              className="h-16 w-auto transition-all duration-300"
+              className="h-24 w-auto md:h-32 transition-all duration-300"
             />
           </button>
 
