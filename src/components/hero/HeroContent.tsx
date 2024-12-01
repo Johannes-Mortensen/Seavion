@@ -55,6 +55,47 @@ export const HeroContent = () => {
           </Button>
         </div>
       </div>
+
+      {/* 3D Cube */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden lg:block mr-16">
+        <div className="w-[400px] h-[400px] relative preserve-3d" 
+             style={{ 
+               perspective: '1000px',
+               transformStyle: 'preserve-3d',
+               animation: 'spin 20s linear infinite'
+             }}>
+          {/* Front */}
+          <div className="absolute w-full h-full bg-blue-500/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white"
+               style={{ transform: 'translateZ(200px)' }}>
+            Front
+          </div>
+          {/* Back */}
+          <div className="absolute w-full h-full bg-blue-500/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white"
+               style={{ transform: 'translateZ(-200px) rotateY(180deg)' }}>
+            Back
+          </div>
+          {/* Right */}
+          <div className="absolute w-full h-full bg-blue-500/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white"
+               style={{ transform: 'translateX(200px) rotateY(90deg)' }}>
+            Right
+          </div>
+          {/* Left */}
+          <div className="absolute w-full h-full bg-blue-500/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white"
+               style={{ transform: 'translateX(-200px) rotateY(-90deg)' }}>
+            Left
+          </div>
+          {/* Top */}
+          <div className="absolute w-full h-full bg-blue-500/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white"
+               style={{ transform: 'translateY(-200px) rotateX(90deg)' }}>
+            Top
+          </div>
+          {/* Bottom */}
+          <div className="absolute w-full h-full bg-blue-500/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white"
+               style={{ transform: 'translateY(200px) rotateX(-90deg)' }}>
+            Bottom
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

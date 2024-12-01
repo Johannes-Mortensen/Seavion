@@ -83,6 +83,10 @@ export default {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-20px)' },
         },
+        spin: {
+          '0%': { transform: 'rotateX(0) rotateY(0)' },
+          '100%': { transform: 'rotateX(360deg) rotateY(360deg)' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
