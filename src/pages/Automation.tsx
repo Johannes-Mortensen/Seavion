@@ -1,10 +1,10 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/sections/ContactSection";
-import { AutomationServices } from "@/components/automation/AutomationServices";
 import { AutomationBenefits } from "@/components/automation/AutomationBenefits";
 import { AutomationProcess } from "@/components/automation/AutomationProcess";
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const Automation = () => {
   const scrollToContact = () => {
@@ -17,36 +17,39 @@ const Automation = () => {
       <Header />
       
       <main className="container mx-auto px-4 pt-32 pb-20">
-        <h1 className="text-4xl md:text-5xl font-bold text-white text-center mb-8">
-          Automatisering
-        </h1>
-        
-        <section className="mb-20">
-          <AutomationServices />
+        {/* Hero Section */}
+        <section className="max-w-4xl mx-auto text-center mb-20 animate-fade-in">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Automatisering for fremtidens bedrifter
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            Vi hjelper virksomheter med å implementere smarte automatiseringsløsninger 
+            som effektiviserer arbeidsprosesser, reduserer kostnader og frigjør 
+            verdifull tid for dine ansatte.
+          </p>
+          <Button 
+            onClick={scrollToContact}
+            className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 text-lg group"
+          >
+            Kom i gang med automatisering
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          </Button>
         </section>
 
+        {/* Benefits Section */}
         <section className="mb-20">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Fordeler med automatisering
+          </h2>
           <AutomationBenefits />
         </section>
 
+        {/* Process Section */}
         <section className="mb-20">
-          <AutomationProcess />
-        </section>
-
-        <section className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Er du klar for å automatisere din virksomhet?
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Vår prosess
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Ta kontakt med oss i dag for en gratis konsultasjon.
-          </p>
-          <Button 
-            size="lg"
-            onClick={scrollToContact}
-            className="bg-blue-600 hover:bg-blue-700 text-white"
-          >
-            Start reisen mot smartere drift
-          </Button>
+          <AutomationProcess />
         </section>
       </main>
 
