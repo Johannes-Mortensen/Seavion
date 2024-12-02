@@ -29,31 +29,23 @@ export const Header = () => {
       navigate("/");
       // Wait for navigation to complete before scrolling
       setTimeout(() => {
-        const section = document.querySelector(sectionId);
-        if (section) {
-          const headerOffset = 100;
-          const elementPosition = section.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-          });
-        }
+        scrollToTarget(sectionId);
       }, 100);
     } else {
-      // If already on home page, scroll directly
-      const section = document.querySelector(sectionId);
-      if (section) {
-        const headerOffset = 100;
-        const elementPosition = section.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      scrollToTarget(sectionId);
+    }
+  };
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth"
-        });
-      }
+  const scrollToTarget = (sectionId: string) => {
+    const targetSection = document.querySelector(sectionId);
+    if (targetSection) {
+      const headerHeight = 96; // Height of the fixed header
+      const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth"
+      });
     }
   };
 
