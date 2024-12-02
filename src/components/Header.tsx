@@ -39,7 +39,7 @@ export const Header = () => {
   const scrollToTarget = (sectionId: string) => {
     const targetSection = document.querySelector(sectionId);
     if (targetSection) {
-      const headerHeight = 120; // Adjusted for new taller header
+      const headerHeight = 80; // Adjusted for smaller header
       const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
       
       window.scrollTo({
@@ -86,7 +86,7 @@ export const Header = () => {
       )}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-32">
+        <div className="flex items-center justify-between h-20">
           <button 
             onClick={() => navigate("/")}
             className="flex items-center"
@@ -94,7 +94,7 @@ export const Header = () => {
             <img 
               src="/logo.svg" 
               alt="Seavion Logo" 
-              className="h-28 w-auto md:h-32 transition-all duration-300"
+              className="h-16 w-auto md:h-20 transition-all duration-300"
             />
           </button>
 
