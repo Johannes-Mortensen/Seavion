@@ -4,13 +4,25 @@ import { StrategyServices } from "@/components/strategy/StrategyServices";
 import { StrategyCTA } from "@/components/strategy/StrategyCTA";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { useNavigate } from "react-router-dom";
 
 const Strategy = () => {
+  const navigate = useNavigate();
+
   const scrollToContact = () => {
-    const contactSection = document.querySelector('#contact-section');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    navigate("/");
+    // Wait for navigation to complete before scrolling
+    setTimeout(() => {
+      const contactSection = document.querySelector("#contact-section");
+      if (contactSection) {
+        const headerHeight = 80;
+        const targetPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth"
+        });
+      }
+    }, 100);
   };
 
   return (
@@ -19,7 +31,7 @@ const Strategy = () => {
       <StrategyHero scrollToContact={scrollToContact} />
       <StrategyProcess />
       <StrategyServices />
-      <StrategyCTA />
+      <StrategyCTA scrollToContact={scrollToContact} />
       <Footer />
     </div>
   );

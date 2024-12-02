@@ -4,11 +4,25 @@ import { ContactSection } from "@/components/sections/ContactSection";
 import { Button } from "@/components/ui/button";
 import { Brain, ChartBar, Database, LineChart, Server, BrainCircuit } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 
 const AIAnalytics = () => {
+  const navigate = useNavigate();
+
   const scrollToContact = () => {
-    const contactSection = document.querySelector("#contact-section");
-    contactSection?.scrollIntoView({ behavior: "smooth" });
+    navigate("/");
+    // Wait for navigation to complete before scrolling
+    setTimeout(() => {
+      const contactSection = document.querySelector("#contact-section");
+      if (contactSection) {
+        const headerHeight = 80;
+        const targetPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth"
+        });
+      }
+    }, 100);
   };
 
   const services = [
@@ -127,7 +141,6 @@ const AIAnalytics = () => {
         </div>
       </section>
 
-      <ContactSection />
       <Footer />
     </div>
   );
