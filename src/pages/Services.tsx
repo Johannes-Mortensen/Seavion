@@ -41,8 +41,7 @@ const Tjenester = () => {
       features: [
         "Digital transformasjon",
         "Teknologistrategi",
-        "Implementeringsrådgivning",
-        "Endringsledelse"
+        "Implementeringsrådgivning"
       ]
     }
   ];

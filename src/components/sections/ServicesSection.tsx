@@ -38,8 +38,7 @@ export const ServicesSection = () => {
       features: [
         "Digital transformasjon",
         "Teknologistrategi",
-        "Implementeringsrådgivning",
-        "Endringsledelse"
+        "Implementeringsrådgivning"
       ],
       path: "/tjenester/strategi"
     }
