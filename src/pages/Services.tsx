@@ -1,12 +1,18 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ContactSection } from "@/components/sections/ContactSection";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { Brain, Cpu, LineChart, ArrowRight } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
-const Tjenester = () => {
+const Services = () => {
   const navigate = useNavigate();
+  
+  const scrollToContact = () => {
+    const contactSection = document.querySelector("#contact-section");
+    contactSection?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const services = [
     {
@@ -100,10 +106,7 @@ const Tjenester = () => {
 
         <div className="text-center">
           <Button
-            onClick={() => {
-              const contactSection = document.querySelector('#contact-section');
-              contactSection?.scrollIntoView({ behavior: 'smooth' });
-            }}
+            onClick={scrollToContact}
             className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-6"
           >
             Kontakt oss for en uforpliktende prat
@@ -111,9 +114,10 @@ const Tjenester = () => {
         </div>
       </main>
       
+      <ContactSection />
       <Footer />
     </div>
   );
 };
 
-export default Tjenester;
+export default Services;

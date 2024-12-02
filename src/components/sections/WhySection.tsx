@@ -1,4 +1,4 @@
-import { Brain, Target, Sliders, LineChart } from "lucide-react";
+import { Brain, Sliders, LineChart } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -20,6 +20,11 @@ export const WhySection = () => {
       description: "Vi leverer resultater som kan spores i økt produktivitet, reduserte kostnader og bærekraftige gevinster."
     }
   ];
+
+  const scrollToContact = () => {
+    const contactSection = document.querySelector("#contact-section");
+    contactSection?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <section id="why-section" className="py-20 relative z-10">
@@ -62,6 +67,7 @@ export const WhySection = () => {
           <Button 
             size="lg"
             className="bg-blue-600 hover:bg-blue-700 text-white"
+            onClick={scrollToContact}
           >
             Kontakt oss
           </Button>
