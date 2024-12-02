@@ -2,8 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
-import { supabase } from "@/lib/supabase";
+import { supabase, isSupabaseConfigured } from "@/lib/supabase";
 import { useToast } from "@/components/ui/use-toast";
+import { AlertCircle } from "lucide-react";
 
 export const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -25,6 +26,17 @@ export const ContactSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!isSupabaseConfigured()) {
+      toast({
+        title: "Systemfeil",
+        description: "Kontaktskjemaet er ikke konfigurert ennå. Vennligst kontakt oss direkte via e-post eller telefon.",
+        variant: "destructive",
+        duration: 5000,
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -60,7 +72,7 @@ export const ContactSection = () => {
     } catch (error) {
       toast({
         title: "Noe gikk galt",
-        description: "Vennligst prøv igjen senere.",
+        description: "Vennligst prøv igjen senere eller kontakt oss direkte.",
         variant: "destructive",
         duration: 5000,
       });
@@ -69,6 +81,9 @@ export const ContactSection = () => {
     }
   };
 
+  // Show configuration warning for admins/developers
+  const showConfigWarning = !isSupabaseConfigured();
+
   return (
     <section id="contact-section" className="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
       <div className="container mx-auto px-4">
@@ -76,6 +91,18 @@ export const ContactSection = () => {
           <h2 className="text-4xl font-bold text-center text-white mb-12">
             Kontakt oss
           </h2>
+          
+          {showConfigWarning && (
+            <div className="mb-8 p-4 bg-yellow-900/20 border border-yellow-600/50 rounded-lg">
+              <div className="flex items-center gap-2 text-yellow-500 mb-2">
+                <AlertCircle className="h-5 w-5" />
+                <p className="font-semibold">Utvikler-notat</p>
+              </div>
+              <p className="text-yellow-400/90 text-sm">
+                Supabase er ikke konfigurert. Vennligst sett opp VITE_SUPABASE_URL og VITE_SUPABASE_ANON_KEY miljøvariabler.
+              </p>
+            </div>
+          )}
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Contact Form */}
