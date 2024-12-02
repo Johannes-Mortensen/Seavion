@@ -5,7 +5,7 @@ export const ContactCard = () => {
         <div className="flex flex-col items-center text-center space-y-6">
           <div className="relative w-64 h-64 rounded-2xl overflow-hidden border-2 border-white/10">
             <img 
-              src="/lovable-uploads/f7435dca-8ea8-46e3-8de7-1ec481394adb.png"
+              src="/lovable-uploads/969f07e9-583a-4fff-b8c9-b0d4a94b8246.png"
               alt="Johannes Mortensen Flessen"
               className="w-full h-full object-cover"
             />
