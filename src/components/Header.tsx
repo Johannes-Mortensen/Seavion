@@ -24,28 +24,30 @@ export const Header = () => {
   }, [location.pathname]);
 
   const scrollToSection = (sectionId: string) => {
-    // First, ensure we're on the home page
-    if (location.pathname !== "/") {
-      navigate("/");
-      // Wait for navigation to complete before scrolling
-      setTimeout(() => {
-        scrollToTarget(sectionId);
-      }, 100);
-    } else {
-      scrollToTarget(sectionId);
-    }
-  };
-
-  const scrollToTarget = (sectionId: string) => {
     const targetSection = document.querySelector(sectionId);
     if (targetSection) {
-      const headerHeight = 80; // Adjusted for smaller header
+      const headerHeight = 80;
       const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
       
       window.scrollTo({
         top: targetPosition,
         behavior: "smooth"
       });
+    } else if (location.pathname !== "/") {
+      // If section not found and we're not on home page, navigate home first
+      navigate("/");
+      // Wait for navigation to complete before scrolling
+      setTimeout(() => {
+        const newTargetSection = document.querySelector(sectionId);
+        if (newTargetSection) {
+          const headerHeight = 80;
+          const targetPosition = newTargetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth"
+          });
+        }
+      }, 100);
     }
   };
 
