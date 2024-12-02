@@ -61,7 +61,6 @@ export const ContactSection = () => {
         duration: 5000,
       });
 
-      // Reset form
       setFormData({
         name: "",
         email: "",
@@ -81,14 +80,13 @@ export const ContactSection = () => {
     }
   };
 
-  // Show configuration warning for admins/developers
   const showConfigWarning = !isSupabaseConfigured();
 
   return (
-    <section id="contact-section" className="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+    <section id="contact-section" className="py-20 bg-[#1a1f2c]">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-white mb-12">
+          <h2 className="text-4xl font-bold text-center text-white mb-16">
             Kontakt oss
           </h2>
           
@@ -115,7 +113,7 @@ export const ContactSection = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="bg-gray-800/30 border-gray-700 text-white placeholder:text-gray-400"
+                  className="bg-[#1E2432]/50 border-[#2A303C] text-white placeholder:text-gray-400 h-12 text-base"
                 />
               </div>
               <div>
@@ -126,7 +124,7 @@ export const ContactSection = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="bg-gray-800/30 border-gray-700 text-white placeholder:text-gray-400"
+                  className="bg-[#1E2432]/50 border-[#2A303C] text-white placeholder:text-gray-400 h-12 text-base"
                 />
               </div>
               <div>
@@ -137,7 +135,7 @@ export const ContactSection = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="bg-gray-800/30 border-gray-700 text-white placeholder:text-gray-400"
+                  className="bg-[#1E2432]/50 border-[#2A303C] text-white placeholder:text-gray-400 h-12 text-base"
                 />
               </div>
               <div>
@@ -147,7 +145,7 @@ export const ContactSection = () => {
                   placeholder="Bedrift"
                   value={formData.company}
                   onChange={handleChange}
-                  className="bg-gray-800/30 border-gray-700 text-white placeholder:text-gray-400"
+                  className="bg-[#1E2432]/50 border-[#2A303C] text-white placeholder:text-gray-400 h-12 text-base"
                 />
               </div>
               <div>
@@ -157,29 +155,40 @@ export const ContactSection = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="bg-gray-800/30 border-gray-700 text-white placeholder:text-gray-400 min-h-[150px]"
+                  className="bg-[#1E2432]/50 border-[#2A303C] text-white placeholder:text-gray-400 min-h-[150px] text-base resize-none"
                 />
               </div>
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white h-12 text-base font-medium transition-all duration-200 ease-in-out transform hover:translate-y-[-2px]"
               >
                 {isSubmitting ? "Sender..." : "Send melding"}
               </Button>
             </form>
 
             {/* Contact Person */}
-            <div className="flex flex-col items-center justify-center space-y-6 bg-gray-800/30 rounded-lg p-8">
-              <div className="text-center">
-                <h3 className="text-2xl font-semibold text-white mb-2">
+            <div className="flex flex-col items-center justify-center text-center space-y-8">
+              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+                <div className="w-28 h-28 rounded-full bg-[#1E2432]/80 border-2 border-blue-500/20" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-semibold text-white mb-3">
                   Johannes Mortensen Flessen
                 </h3>
-                <div className="flex flex-col items-center space-y-2">
-                  <p className="text-gray-300">Daglig leder</p>
-                  <p className="text-gray-300">johannesflessen@hotmail.no</p>
-                  <p className="text-gray-300">+47 400 59 901</p>
-                </div>
+                <p className="text-gray-400 mb-2">Daglig leder</p>
+                <a 
+                  href="mailto:johannesflessen@hotmail.no" 
+                  className="text-gray-300 hover:text-blue-400 transition-colors block mb-2"
+                >
+                  johannesflessen@hotmail.no
+                </a>
+                <a 
+                  href="tel:+47400599901" 
+                  className="text-gray-300 hover:text-blue-400 transition-colors block"
+                >
+                  +47 400 59 901
+                </a>
               </div>
             </div>
           </div>
