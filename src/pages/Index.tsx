@@ -18,9 +18,9 @@ const Index = () => {
     contactSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const scrollToWhy = () => {
-    const whySection = document.querySelector('#why-section');
-    whySection?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToWhatWeDo = () => {
+    const whatWeDoSection = document.querySelector('#what-we-do-section');
+    whatWeDoSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
   useEffect(() => {
@@ -57,7 +57,7 @@ const Index = () => {
           <img
             src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21"
             alt="Ocean waves"
-            className="w-full h-full object-cover brightness-[0.3] scale-105 transform transition-transform duration-[2s] hover:scale-110"
+            className="w-full h-full object-cover brightness-[0.3] scale-125 transform transition-transform duration-[2s] hover:scale-130"
           />
         </div>
 
@@ -114,7 +114,7 @@ const Index = () => {
                   size="lg"
                   variant="outline"
                   className="bg-transparent hover:bg-black/10 border-white text-white transform transition-all duration-300 hover:scale-105 hover:shadow-lg w-full sm:w-fit"
-                  onClick={scrollToWhy}
+                  onClick={scrollToWhatWeDo}
                 >
                   Les mer om oss
                 </Button>
