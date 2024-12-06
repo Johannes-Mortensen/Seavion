@@ -31,7 +31,7 @@ export const ContactCard = () => {
           </div>
         </div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-2xl rounded-3xl transition-all duration-300 group-hover:scale-105" />
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-blue-600/20 blur-2xl rounded-3xl transition-all duration-300 group-hover:scale-105" />
     </div>
   );
 };

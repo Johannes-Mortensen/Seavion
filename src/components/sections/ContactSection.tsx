@@ -4,12 +4,6 @@ import { ContactCard } from "@/components/contact/ContactCard";
 export const ContactSection = () => {
   return (
     <section id="contact-section" className="relative py-24 overflow-hidden bg-[#1a1f2c]">
-      {/* Decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -left-1/4 -top-1/4 w-1/2 h-1/2 bg-blue-500/10 rounded-full blur-3xl" />
-        <div className="absolute -right-1/4 -bottom-1/4 w-1/2 h-1/2 bg-purple-500/10 rounded-full blur-3xl" />
-      </div>
-
       <div className="container relative mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-white mb-16">
