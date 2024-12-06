@@ -23,6 +23,19 @@ export const Header = () => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  const handleLogoClick = () => {
+    if (location.pathname === "/") {
+      // If we're already on the home page, just scroll to top
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    } else {
+      // If we're on another page, navigate to home
+      navigate("/");
+    }
+  };
+
   const scrollToSection = (sectionId: string) => {
     const targetSection = document.querySelector(sectionId);
     if (targetSection) {
@@ -90,7 +103,7 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <button 
-            onClick={() => navigate("/")}
+            onClick={handleLogoClick}
             className="flex items-center"
           >
             <img 
