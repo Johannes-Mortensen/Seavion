@@ -11,9 +11,9 @@ export const Footer = () => {
           <div>
             <h3 className="text-white text-xl font-semibold mb-4">Kontakt oss</h3>
             <div className="space-y-3">
-              <a href="mailto:johannesflessen@hotmail.no" className="flex items-center hover:text-blue-500 transition-colors">
+              <a href="mailto:Johannesflessen@hotmail.no" className="flex items-center hover:text-blue-500 transition-colors">
                 <Mail className="w-5 h-5 mr-2 text-blue-500" />
-                <span>johannesflessen@hotmail.no</span>
+                <span>Johannesflessen@hotmail.no</span>
               </a>
               <a href="tel:+47400599901" className="flex items-center hover:text-blue-500 transition-colors">
                 <Phone className="w-5 h-5 mr-2 text-blue-500" />

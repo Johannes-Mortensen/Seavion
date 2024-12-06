@@ -17,10 +17,10 @@ export const ContactCard = () => {
             </h3>
             <p className="text-blue-400 font-medium">Daglig leder</p>
             <a 
-              href="mailto:johannesflessen@hotmail.no" 
+              href="mailto:Johannesflessen@hotmail.no" 
               className="text-gray-300 hover:text-blue-400 transition-colors block"
             >
-              johannesflessen@hotmail.no
+              Johannesflessen@hotmail.no
             </a>
             <a 
               href="tel:+47400599901" 
