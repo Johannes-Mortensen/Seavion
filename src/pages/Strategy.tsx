@@ -1,7 +1,6 @@
 import { StrategyHero } from "@/components/strategy/StrategyHero";
 import { StrategyProcess } from "@/components/strategy/StrategyProcess";
 import { StrategyServices } from "@/components/strategy/StrategyServices";
-import { StrategyCTA } from "@/components/strategy/StrategyCTA";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -25,7 +24,6 @@ const Strategy = () => {
       <StrategyHero scrollToContact={scrollToContact} />
       <StrategyProcess />
       <StrategyServices />
-      <StrategyCTA scrollToContact={scrollToContact} />
       <ContactSection />
       <Footer />
     </div>
