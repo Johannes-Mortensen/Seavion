@@ -3,7 +3,7 @@ import { ContactCard } from "@/components/contact/ContactCard";
 
 export const ContactSection = () => {
   return (
-    <section id="contact-section" className="relative py-24 overflow-hidden bg-gradient-to-b from-[#1a1f2c] to-[#141821]">
+    <section id="contact-section" className="relative py-24 overflow-hidden bg-[#1a1f2c]">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -left-1/4 -top-1/4 w-1/2 h-1/2 bg-blue-500/10 rounded-full blur-3xl" />
