@@ -27,9 +27,10 @@ export const ServicesSection = () => {
   ];
 
   return (
-    <section id="services-section" className="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+    <section id="services-section" className="py-24 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-white mb-8">
+        <h2 className="text-4xl font-bold text-center text-white mb-12 opacity-0 animate-fade-in"
+            style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
           Tjenester som transformerer virksomheter
         </h2>
         
@@ -37,8 +38,9 @@ export const ServicesSection = () => {
           {services.map((service, index) => (
             <Card 
               key={index}
-              className="bg-gray-800/50 backdrop-blur border-gray-700 hover:bg-gray-700/50 transition-all hover:scale-105 duration-300 cursor-pointer"
+              className="bg-gray-800/50 backdrop-blur border-gray-700 hover:bg-gray-700/50 transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer opacity-0 animate-fade-in"
               onClick={() => navigate(`/tjenester/${service.path}`)}
+              style={{ animationDelay: `${0.3 + index * 0.1}s`, animationFillMode: 'forwards' }}
             >
               <CardHeader>
                 <div className="flex justify-center mb-4">

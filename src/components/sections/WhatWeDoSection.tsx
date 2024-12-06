@@ -34,9 +34,9 @@ export const WhatWeDoSection = () => {
   };
 
   return (
-    <section id="what-we-do-section" className="py-20 bg-[#1a1f2c]">
+    <section id="what-we-do-section" className="py-24 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-12">
+        <div className="max-w-3xl mx-auto text-center mb-16 opacity-0 animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Hva gjør vi?
           </h2>
@@ -45,16 +45,17 @@ export const WhatWeDoSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-6 text-center hover:bg-gray-700/50 transition-all"
+              className="bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-8 text-center hover:bg-gray-700/50 transition-all duration-300 hover:scale-105 hover:shadow-xl opacity-0 animate-fade-in"
+              style={{ animationDelay: `${0.2 + index * 0.1}s`, animationFillMode: 'forwards' }}
             >
-              <div className="flex justify-center mb-4">
+              <div className="flex justify-center mb-6">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">
+              <h3 className="text-xl font-semibold text-white mb-4">
                 {service.title}
               </h3>
               <p className="text-gray-300">
@@ -64,11 +65,11 @@ export const WhatWeDoSection = () => {
           ))}
         </div>
 
-        <div className="text-center">
+        <div className="text-center opacity-0 animate-fade-in" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
           <Button
             size="lg"
             onClick={scrollToServices}
-            className="bg-blue-600 hover:bg-blue-700 text-white"
+            className="bg-blue-600 hover:bg-blue-700 text-white transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
           >
             Les mer om våre tjenester
           </Button>
