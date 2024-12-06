@@ -28,6 +28,11 @@ export const WhatWeDoSection = () => {
     }
   ];
 
+  const scrollToServices = () => {
+    const servicesSection = document.querySelector('#services-section');
+    servicesSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section id="what-we-do-section" className="py-20 bg-[#1a1f2c]">
       <div className="container mx-auto px-4">
@@ -62,7 +67,7 @@ export const WhatWeDoSection = () => {
         <div className="text-center">
           <Button
             size="lg"
-            onClick={() => navigate("/services")}
+            onClick={scrollToServices}
             className="bg-blue-600 hover:bg-blue-700 text-white"
           >
             Les mer om våre tjenester
