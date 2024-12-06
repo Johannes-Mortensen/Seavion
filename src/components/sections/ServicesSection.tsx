@@ -1,7 +1,6 @@
 import { Brain, Cpu, LineChart } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 
 export const ServicesSection = () => {
   const navigate = useNavigate();
@@ -45,7 +44,7 @@ export const ServicesSection = () => {
   ];
 
   return (
-    <section id="services-section" className="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+    <section id="services-section" className="py-20 bg-[#1a1f2c]">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-white mb-12">
           Tjenester som transformerer virksomheter

@@ -24,7 +24,7 @@ export const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+    <section className="py-20 bg-[#1a1f2c]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
