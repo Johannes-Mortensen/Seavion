@@ -12,9 +12,9 @@ export const HeroContent = () => {
     contactSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const scrollToWhy = () => {
-    const whySection = document.querySelector('#why-section');
-    whySection?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToWhatWeDo = () => {
+    const whatWeDoSection = document.querySelector('#what-we-do-section');
+    whatWeDoSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
   useEffect(() => {
@@ -111,7 +111,7 @@ export const HeroContent = () => {
             size="lg"
             variant="outline"
             className="bg-transparent hover:bg-black/10 border-white text-white transform transition-all duration-300 hover:scale-105 hover:shadow-lg w-full sm:w-fit"
-            onClick={scrollToWhy}
+            onClick={scrollToWhatWeDo}
           >
             Les mer om oss
           </Button>
