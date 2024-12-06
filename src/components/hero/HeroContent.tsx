@@ -47,11 +47,13 @@ export const HeroContent = () => {
     <div className="relative z-10 min-h-screen flex items-center px-4">
       {/* Background Waves */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21"
-          alt="Ocean waves"
-          className="w-full h-full object-cover brightness-[0.3] scale-105 transform transition-transform duration-[2s] hover:scale-110"
-        />
+        <div className="absolute inset-0 w-[120%] h-[120%] -left-[10%] -top-[10%]">
+          <img
+            src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21"
+            alt="Ocean waves"
+            className="w-full h-full object-cover brightness-[0.3] scale-110 transform transition-transform duration-[2s] hover:scale-115"
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/50 to-gray-900" />
       </div>
 
