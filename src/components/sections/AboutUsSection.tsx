@@ -24,7 +24,7 @@ export const AboutUsSection = () => {
           <CardContent className="p-8">
             <Quote className="w-12 h-12 text-blue-500 mb-6 mx-auto" />
             <blockquote className="text-xl text-gray-300 text-center italic mb-6">
-              "Vi startet Seavion med et mål om å bygge bro mellom teknologi og praktiske løsninger for bedrifter. Vi tror at hver utfordring er en mulighet til å skape noe bedre."
+              "Vi startet Seavion for å hjelpe bedrifter med å implementere og utnytte kraften i fantastisk teknologi som kunstig intelligens, for å skape smartere, mer effektive og fremtidsrettede løsninger."
             </blockquote>
             <p className="text-gray-400 text-center">
               - Grunnleggerne av Seavion
